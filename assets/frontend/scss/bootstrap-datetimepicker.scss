@@ -1,0 +1,29 @@
+
+//@import "~tempusdominus-bootstrap-4/src/sass/tempusdominus-bootstrap-4-build.scss";
+
+//@import "~eonasdan-bootstrap-datetimepicker/src/sass/bootstrap-datetimepicker-build.scss";
+
+$btn-primary-bg: theme-color("primary") !default;
+$btn-primary-color: theme-color("primary") !default;
+$gray-light: $gray-400 !default;
+$gray-lighter: $gray-600 !default;
+$bs-datetimepicker-border-radius: $border-radius !default;
+$screen-sm-min: map-get($grid-breakpoints, sm) !default;
+$screen-md-min: map-get($grid-breakpoints, md) !default;
+$screen-lg-min: map-get($grid-breakpoints, lg) !default;
+
+@import "../../../node_modules/eonasdan-bootstrap-datetimepicker/src/sass/bootstrap-datetimepicker-build";
+
+.bootstrap-datetimepicker-widget {
+  table.table-condensed {
+    @extend .table;
+    @extend .table-sm;
+    @extend .mb-0;
+
+    th, td {
+      @extend .border-0;
+    }
+  }
+
+}
+

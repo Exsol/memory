@@ -1,0 +1,31 @@
+.admin-user-show {
+    width: 100%;
+
+    &__canvas {
+        visibility: visible;
+        opacity:1;
+        transition:visibility 0.3s linear,opacity 0.3s linear;
+
+        &.is--hidden {
+            visibility: hidden;
+            opacity:0;
+        }
+    }
+
+    &__no-data {
+        display: block;
+        text-align: center;
+        opacity: 1;
+        transition: opacity 0.3s linear;
+
+        &.is--hidden {
+            display: none;
+            opacity: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: $red;
+        }
+    }
+
+}

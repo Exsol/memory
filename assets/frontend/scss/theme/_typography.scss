@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:300,400,500,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Open+Sans:300,400,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Charm:400,700');
+
+
+
+body {
+  font-family: $body-font;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.5;
+  color: $body-color;
+  letter-spacing: 1px;
+}
+
+/* ------------------------
+    Typography
+------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-family: $title-font;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: inherit;
+}
+
+h1 {
+  font-size: 60px;
+  font-style: normal;
+  line-height: 70px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: $title-color;
+  letter-spacing: 0;
+}
+
+h2 {
+  font-size: 40px;
+  font-style: normal;
+  line-height: 46px;
+  font-weight: 600;
+  color: $title-color;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+h3 {
+  font-size: 30px;
+  font-style: normal;
+  line-height: 36px;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 24px;
+  font-style: normal;
+  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 30px;
+  color: $title-color;
+}
+
+h5 {
+  font-size: 20px;
+  font-style: normal;
+  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 26px;
+  color: $title-color;
+}
+
+h6 {
+  font-size: 18px;
+  font-style: normal;
+  line-height: 24px;
+  margin-bottom: 10px;
+  color: $title-color;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+u {
+  text-decoration-style: wavy;
+}
+
+body.home-2 h1, h2, h3, h4, h5, h6 {
+  font-family: $title-font2;
+}
+
+body.home-3 h1, h2, h3, h4, h5, h6 {
+  font-family: $title-font3;
+}
+
+body.home-4 h1, h2, h3, h4, h5, h6 {
+  font-family: $title-font4;
+}
+
+body.home-5 h1, h2, h3, h4, h5, h6 {
+  font-family: $title-font5;
+}
+
+body.home-6 h1, h2, h3, h4, h5, h6 {
+  font-family: $title-font6;
+}

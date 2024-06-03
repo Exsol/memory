@@ -1,0 +1,18 @@
+/*
+Template Name: Admin Template
+Author: Niravjoshi / Wrappixel
+File: scss
+*/
+
+//(Required file)
+@import 'pdf/variable';
+
+@import 'base/global';
+
+//This is for the icons (Required file)
+@import 'icons/font-awesome/css/fontawesome-all.css';
+
+// Import Bootstrap source files (Required file)
+@import "bootstrap/bootstrap";
+
+@import "pdf/base";

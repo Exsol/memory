@@ -1,0 +1,37 @@
+#calendar-body {
+  margin-top: 20px;
+  .fc-event {
+    border: none;
+    padding: 4px 10px;
+    margin-bottom: 1px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+
+  .fc-bg-normal {
+
+    background-color: #e1f0ff;
+
+    .fc-event-title {
+      color: #3699ff;
+    }
+  }
+
+  .fc-bg-vacation {
+    background-color: #abece1;
+
+    .fc-event-title {
+      color: #0bb7af;
+    }
+  }
+
+  .fc-bg-sick {
+
+    background-color: #f7b3bf;
+
+    .fc-event-title {
+      color: #f64e60;
+    }
+  }
+}

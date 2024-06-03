@@ -1,0 +1,338 @@
+/* ------------------------------------------------
+  Project:   Softino - Software Landing Page HTML5 Template
+  Author:    ThemeHt
+
+  NOTE: This is Color customizer stylesheet of template.
+------------------------------------------------ */
+
+/* ------------------------
+    General
+------------------------*/
+
+$theme-color  : #FF512F;
+$theme-color2 : #f09819;
+$white : #ffffff;
+
+::-moz-selection {
+  background: $theme-color;
+  color: $white;
+  text-shadow: none;
+  background: $theme-color;
+  color: $white;
+  text-shadow: none;
+}
+
+::selection {
+  background: $theme-color;
+  color: $white;
+  text-shadow: none;
+}
+
+/* ------------------------
+    Background Color
+------------------------*/
+
+.theme-bg, div.color-customizer a.opener {
+  background-color: $theme-color;
+}
+
+.btn {
+  &:hover, &.btn-dark:hover {
+    background-color: $theme-color;
+  }
+}
+
+.owl-carousel.owl-theme .owl-dots .owl-dot {
+  &:hover span, &.active span {
+    background-color: $theme-color;
+  }
+}
+
+.scroll-top a, .pagination > li.active .page-link {
+  background-color: $theme-color;
+}
+
+.page-link {
+  &:hover, &:focus {
+    background-color: $theme-color;
+  }
+}
+
+.accordion {
+  .card {
+    &.active a, a:hover {
+      background-color: $theme-color;
+    }
+  }
+  .card-header a span {
+    &::before, &::after {
+      background-color: $theme-color;
+    }
+  }
+}
+
+.title-effect .bar, .title-effect-2 .ellipse, .video-btn .play-btn {
+  background-color: $theme-color;
+}
+
+.tab {
+  .nav-tabs {
+    .nav-link {
+      &.active, &:hover {
+        background-color: $theme-color;
+      }
+    }
+    &.active > a:focus, > a:hover {
+      background-color: $theme-color;
+    }
+  }
+  &.style-2 .nav-tabs .nav-link i::after {
+    background-color: $theme-color;
+  }
+  .nav-tabs {
+    .nav-link.active i::after, &.active > a:focus i::after {
+      background-color: $theme-color;
+    }
+  }
+}
+
+.team-member.style-3 {
+  &::before, &::after {
+    background-color: $theme-color;
+  }
+}
+
+.testimonial {
+  &.style-1::before, &.style-4::after {
+    background-color: $theme-color;
+  }
+}
+
+.testimonial-caption::after, .icon-btn:hover, .box-loader span {
+  background-color: $theme-color;
+}
+
+.post {
+  .post-image {
+    &::before, &::after {
+      background-color: $theme-color;
+    }
+  }
+  .post-categories {
+    background-color: $theme-color;
+  }
+}
+
+.post-title::after, .post.style-3 .post-meta::after, .post-tags li a:hover, .list-icon-2 li::before, .price-table.style-3.active, .bg-effect-4::after, .ht-progress-bar .progress .progress-bar {
+  background-color: $theme-color;
+}
+
+.testimonial-caption::before, .post-title::before, .post.style-3 .post-meta::before {
+  background-color: $theme-color2;
+}
+
+/* ------------------------
+    Color
+------------------------*/
+
+a, button, input {
+  color: $theme-color;
+}
+
+a {
+  &:focus, &:hover {
+    color: $theme-color;
+  }
+}
+
+.text-theme {
+  color: $theme-color;
+}
+
+.navbar-nav {
+  .nav-link:hover, .nav-item .nav-link.active, .nav-link:hover::before, .nav-item .nav-link.active::before, .nav-link:focus::before {
+    color: $theme-color;
+  }
+}
+
+.nav-item.dropdown .dropdown-menu a {
+  &:hover {
+    color: $theme-color;
+    &::before {
+      color: $theme-color;
+    }
+  }
+  &:focus::before {
+    color: $theme-color;
+  }
+}
+
+.header-3 #header-wrap.fixed-header .navbar-nav {
+  .nav-link:hover, .nav-item .nav-link.active, .nav-link.active::before {
+    color: $theme-color;
+  }
+}
+
+h1 span, .btn-simple:hover {
+  color: $theme-color;
+}
+
+.btn {
+  &.btn-white {
+    &:hover, &.btn-border:hover {
+      color: $theme-color;
+    }
+  }
+  &:focus, &.focus {
+    color: $theme-color;
+  }
+}
+
+.breadcrumb-item {
+  &.active, a:hover {
+    color: $theme-color;
+  }
+}
+
+.list-icon li i {
+  color: $theme-color;
+}
+
+.tab.style-2 .nav-tabs {
+  .nav-link {
+    &:hover h5, &.active h5 {
+      color: $theme-color;
+    }
+  }
+  &.active > a:focus h5 {
+    color: $theme-color;
+  }
+}
+
+.testimonial .testimonial-caption h5, .price-title, .price-list li i, .post .post-desc h4 a:hover, .post-meta ul li i, .comment-reply a:hover, .comment-date, .footer-list li a:hover, .counter span, .search-button {
+  color: $theme-color;
+}
+
+.widget {
+  .widget-categories li a:hover, .recent-post-desc a:hover {
+    color: $theme-color;
+  }
+}
+
+.scroll-top a {
+  &:hover, &:focus {
+    color: $theme-color;
+  }
+}
+
+.team-member .team-description h5, .team-link:hover {
+  color: $theme-color;
+}
+
+.team-description .team-icon li {
+  i, a:hover {
+    color: $theme-color;
+  }
+}
+
+.theme-bg .video-btn .play-btn, .dark-bg .video-btn .play-btn, .featured-item .featured-icon i, .step-num, .dark-bg .step-desc h4, .media-icon li a, .contact-media i, .widget-searchbox .search-btn {
+  color: $theme-color;
+}
+
+.price-table.style-2 .price-title, .post-categories:hover, .counter i {
+  color: $theme-color2;
+}
+
+.featured-item {
+  &.style-1:hover .featured-icon i, &.style-2:hover .featured-icon i, &.style-6:hover .featured-icon i {
+    color: $theme-color2;
+  }
+}
+
+/* ------------------------
+    Border Color
+------------------------*/
+
+.owl-carousel.owl-theme .owl-dots .owl-dot span::before, .form-control:focus, .reply a:hover, .pagination > li.active .page-link {
+  border-color: $theme-color;
+}
+
+.page-link {
+  &:hover, &:focus {
+    border-color: $theme-color;
+  }
+}
+
+.owl-carousel .owl-nav button {
+  &.owl-prev:hover, &.owl-next:hover {
+    border-color: $theme-color;
+  }
+}
+
+.featured-item.style-6:hover .featured-icon i::after {
+  border-color: $theme-color;
+}
+
+.testimonial-carousel .controls li.active {
+  &:after, &:before {
+    border-color: $theme-color;
+  }
+}
+
+.testimonial.style-2 .testimonial-img {
+  &:before, &:after {
+    border-color: $theme-color;
+  }
+}
+
+.contact-media {
+  border-color: $theme-color;
+}
+
+[class*="col-"]:nth-child(2) .contact-media {
+  border-color: $theme-color2;
+}
+
+/* ------------------------
+  Grediant Color
+------------------------*/
+
+.btn.btn-theme {
+  background: rgb(255, 81, 47);
+  background: linear-gradient(90deg, rgba(255, 81, 47, 1) 0%, rgba(240, 152, 25, 1) 80%);
+  color: $white;
+}
+
+.owl-carousel .owl-nav button {
+  &.owl-prev:hover, &.owl-next:hover {
+    background: rgb(255, 81, 47);
+    background: linear-gradient(90deg, rgba(255, 81, 47, 1) 0%, rgba(240, 152, 25, 1) 80%);
+    color: $white;
+  }
+}
+
+[data-overlay].grediant-overlay:before {
+  background: rgb(255, 81, 47);
+  background: linear-gradient(90deg, rgba(255, 81, 47, 1) 0%, rgba(240, 152, 25, 1) 80%);
+}
+
+.featured-item::before {
+  background: rgb(255, 81, 47);
+  background: linear-gradient(180deg, rgba(255, 81, 47, 1) 0%, rgba(240, 152, 25, 1) 80%);
+}
+
+.grediant-bg {
+  background: rgb(255, 81, 47);
+  background: linear-gradient(90deg, rgba(255, 81, 47, 1) 0%, rgba(240, 152, 25, 1) 80%);
+}
+
+@media (max-width: 992px) {
+  .navbar-toggler span {
+    background-color: $theme-color;
+  }
+  .header-3 .navbar-nav {
+    .nav-link:hover, .nav-item .nav-link.active, .nav-link:hover::before, .nav-item .nav-link.active::before, .nav-link:focus::before {
+      color: $theme-color;
+    }
+  }
+}

@@ -1,0 +1,158 @@
+/* ------------------------
+    Footer
+------------------------*/
+
+.footer {
+  padding: 80px 0;
+}
+
+.footer-pattern {
+  bottom: 0;
+  position: absolute;
+}
+
+.primary-footer {
+  position: relative;
+  z-index: 99;
+  font-size: 16px;
+}
+
+.secondary-footer {
+  color: $body-color;
+  font-weight: normal;
+}
+
+.copyright {
+  margin-top: 50px;
+  span a {
+    font-weight: bold;
+  }
+}
+
+.theme-bg .copyright {
+  border-top: 2px solid rgba(255, 255, 255, 0.03);
+  padding-top: 50px;
+}
+
+.footer-logo img {
+  height: 70px;
+}
+
+.primary-footer {
+  color: $black;
+  a {
+    color: $black;
+  }
+  h4 {
+    margin-bottom: 20px;
+  }
+}
+
+.footer-1 {
+  margin-top: 100px;
+  padding-top: 150px;
+}
+
+.footer-2 {
+  padding-top: 250px;
+}
+
+.footer-3 {
+  padding-top: 220px;
+}
+
+.media-icon {
+  &.list-inline li {
+    display: inline-block;
+  }
+  li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    a {
+      color: $theme-color;
+      &:hover {
+        text-decoration: underline !important;
+      }
+    }
+  }
+}
+
+.footer-list {
+  li {
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    a {
+      position: relative;
+      font-size: 16px;
+      font-weight: 400;
+      color: $black;
+    }
+  }
+  .list-inline li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
+
+.footer-logo {
+  margin-bottom: 15px;
+}
+
+.footer-social ul li {
+  display: inline-block;
+  a {
+    color: $black;
+    &:hover {
+      color: $theme-color;
+    }
+  }
+}
+
+.theme-bg {
+  .primary-footer {
+    color: $white;
+    a {
+      color: $white;
+    }
+  }
+  .secondary-footer, .footer-social ul li a, .footer-list li a, .primary-footer h4 {
+    color: $white;
+  }
+}
+
+.dark-bg {
+  .primary-footer {
+    color: $white;
+    a {
+      color: $white;
+    }
+  }
+  .secondary-footer, .footer-social ul li a, .footer-list li a, .primary-footer h4 {
+    color: $white;
+  }
+}
+
+.footer h4 {
+  display: block;
+}
+
+#footer-wave {
+  position: absolute;
+  height: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  svg {
+    path {
+      fill: $whitebg;
+    }
+    @include transform(scale(1.2));
+  }
+}

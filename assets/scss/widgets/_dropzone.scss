@@ -1,0 +1,51 @@
+.note-editor.note-frame, .dropzone {
+  border: dashed 3px #3e5569;
+}
+
+
+.dropzone {
+  .dz-message{
+    .dz-button {
+      font-size: 30px;
+      min-height: 350px;
+    }
+  }
+  .dz-preview {
+    width: 200px;
+
+    .dz-error-message {
+      width: 100%;
+      text-align: center;
+      left: 0;
+    }
+    .dz-error-message:after{
+      left: 94px;
+    }
+    &.dz-file-preview {
+      .dz-image {
+        width: 200px;
+      }
+    }
+
+    .dz-success-mark {
+      background-color: transparentize($success, 0.2);
+      margin-left: -10px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .dz-error-mark {
+      background-color: transparentize($danger, 0.2);
+      margin-left: -10px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+  }
+}

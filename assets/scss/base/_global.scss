@@ -1,0 +1,123 @@
+.is--hidden {
+  display: none;
+}
+
+.topbar.fixed {
+  position: fixed !important;
+  width: 100%;
+}
+
+.item_region option:disabled{
+  background: #2962ff;
+  color: #fff;
+}
+
+.css--todo-attachment-pdf{
+  font-size: 400px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+#item_table .select2-container{
+  min-width: 200px;
+}
+
+#main-wrapper[data-layout=horizontal] .css--pc-navigation #sidebarnav .sidebar-link {
+  color: #212529;
+}
+
+#main-wrapper[data-layout=horizontal] .css--pc-navigation .sidebar-nav ul .sidebar-item .sidebar-link i {
+  color: #4F5467;
+}
+
+#main-wrapper[data-layout=horizontal] .css--pc-navigation .sidebar-nav .has-arrow::after {
+  border-color: #212529;
+}
+
+#main-wrapper[data-layout=horizontal] .css--pc-navigation .sidebar-item ul.collapse {
+  background: #fff;
+}
+
+.css--mobile-navigation {
+  display: none;
+}
+
+.css--hide-icon .sidebar-link i {
+  display: none !important;
+}
+
+@media (max-width: 991px) {
+  .css--pc-navigation {
+    display: none;
+  }
+  .css--mobile-navigation {
+    display: block;
+  }
+  table thead tr th {
+    width: auto !important;
+  }
+  table thead {
+    min-width: 20% !important;
+  }
+
+}
+
+
+  .accordion-toggle {
+
+    .admin-user-log {
+      &__collapse-button {
+        &::before {
+          content: '-';
+          font-weight: bold;
+        }
+      }
+    }
+
+    .admin-user-log {
+      &__collapse-button {
+        &.collapsed {
+          &::before {
+            content: '+';
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+  }
+
+  .select2-container--bootstrap-5 .select2-selection {
+    font-size: 0.8rem;
+  }
+
+  .select2-container--bootstrap-5 .select2-selection--single {
+    padding: 5px;
+    min-width: 120px;
+
+    &.min-width-90 {
+      min-width: 90px;
+    }
+
+    &.min-width-100 {
+      min-width: 100px;
+    }
+
+    &.min-width-110 {
+      min-width: 110px;
+    }
+
+    &.min-width-120 {
+      min-width: 120px;
+    }
+
+    &.min-width-130 {
+      min-width: 130px;
+    }
+
+    &.min-width-140 {
+      min-width: 140px;
+    }
+  }
+

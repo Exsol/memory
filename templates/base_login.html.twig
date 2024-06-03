@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="{#{ app.request.locale }#}">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{% block title %}{% endblock %}</title>
+    {#<link rel="alternate" type="application/rss+xml" title="{{ 'rss.title'|trans }}" href="{{ path('blog_rss') }}">#}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app-styles') }}
+    {% endblock %}
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('build/images/favicon.ico') }}"/>
+
+    {#<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->#}
+    {#<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->#}
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id="{% block body_id %}{% endblock %}" class="fixed-left {% block body_class %}{% endblock %}">
+
+{#
+{% block browpreloaderserupgrade %}
+    <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+{% endblock %}
+#}
+
+{#<div id="preloader"><div id="status"><div class="spinner"></div></div></div>#}
+
+{% block body %}
+    <div class="accountbg">
+
+        <div class="content-center">
+            <div class="content-desc-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5 col-md-8">
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <h3 class="text-center mt-0 m-b-15">
+                                        <a href="index.html" class="logo logo-admin"><img src="{{ asset('build/images/logo-dark.png') }}" height="80" alt="logo"></a>
+                                    </h3>
+
+                                    <h4 class="text-muted text-center font-18">{% block content_title %}<b>{{ 'title.login'|trans }}</b>{% endblock %}</h4>
+
+                                    <div class="p-2">
+                                        {% block main %}{% endblock %}
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+
+    {{ include('partials/flash_messages.html.twig') }}
+{% endblock %}
+
+</body>
+</html>

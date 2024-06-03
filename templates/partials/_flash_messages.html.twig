@@ -1,0 +1,9 @@
+<script>
+    $(function(){
+        {% for type, messages in app.flashes %}
+            {% for message in messages %}
+                toastr.{{ type }}('', '{{ message|trans }}', { "closeButton": true });
+            {% endfor %}
+        {% endfor %}
+    });
+</script>

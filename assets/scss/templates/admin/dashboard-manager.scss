@@ -1,0 +1,111 @@
+.dashboard-area-stats select:hover{
+    cursor: pointer;
+}
+input.short-datetimepicker{
+    //background-color: #f4f4f4;
+    //color:#707070;
+    //font-size: 20px;
+    //font-weight: bold;
+    text-align: center;
+    //border-radius: 5px;
+}
+.dashboard-form label{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.css--hide-year .table-condensed thead .picker-switch, .table-condensed thead  .prev, .table-condensed thead .next
+{
+    display: none;
+}
+.card-heading{
+    font-size: 20px;
+    font-weight: bold;
+}
+.send-form-area-manager-stats{
+    //height: 44px;
+    //width: 120px;
+}
+.area-performance {
+    padding: 0 10px;
+    margin-left: 20px;
+    font-size: 16px;
+}
+.area-name{
+    line-height: normal;
+}
+.area-item {
+    &__inner {
+        background: #f4f4f4;
+        border-radius: 5px;
+        padding: 5px 15px;
+    }
+}
+.area-row-items {
+    /*gap: 20px;*/
+    /*padding: 0 10px;*/
+}
+
+.town-name{
+    font-weight: bold;
+    font-size: 20px;
+    color: #707070;
+    margin: 10px 0;
+}
+.label-hub{
+    font-size: 15px;
+    font-weight: bold;
+}
+.result-hub {
+    font-size: 20px;
+    font-weight: bold;
+}
+select.area-select{
+    //background: #f4f4f4;
+    //color: #707070;
+    //font-size: 20px;
+    //font-weight: bold;
+    border-radius: 5px;
+    //padding:5px;
+}
+.load-block{
+    opacity: 0.5;
+}
+.spinner-center-position{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 50%;
+}
+.high{
+    color: #32d838;
+}
+.normal{
+    color: #fe862d;
+}
+.low{
+    color: #fe1a1e;
+}
+.filter-dashboard{
+    //width: 140px;
+    //height: 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 84px;
+}
+.score-performance{
+    width: 60px;
+}
+.performance-period{
+    font-size: 10px;
+}
+.css--hover:hover{
+    cursor: pointer;
+}
+#datatable-user-accounting tfoot{
+    border-bottom: solid 1px #eeee;
+}

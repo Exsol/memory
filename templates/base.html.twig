@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>{% block title %}{% endblock %}</title>
+    {#<link rel="alternate" type="application/rss+xml" title="{{ 'rss.title'|trans }}" href="{{ path('blog_rss') }}">#}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app-styles') }}
+    {% endblock %}
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+
+    {#<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->#}
+    {#<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->#}
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    {# Einbindung der OneSignal Javascript API #}
+    {#% include('onesignal/onesignal.html.twig') %#}
+
+</head>
+<body id="{% block body_id %}{% endblock %}">
+
+{% block preloader %}
+    {{ include('partials/preloader.html.twig') }}
+{% endblock %}
+
+<div id="main-wrapper">
+
+    {% block header %}
+        <header class="topbar">
+            {{ include('partials/main_nav.html.twig') }}
+        </header>
+    {% endblock %}
+
+
+    <div class="page-wrapper">
+        {% block body %}
+            <div class="container-fluid">
+                <div class="row">
+                    {% block main %}{% endblock %}
+                </div>
+            </div>
+        {% endblock %}
+    </div>
+
+
+    {% block footer %}
+        <footer class="footer text-center">
+            <p>&copy; {{ 'now'|date('Y') }} - {{ app_name() }}</p>
+        </footer>
+    {% endblock %}
+</div>
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+    {{ encore_entry_script_tags('plugins') }}
+
+    {{ include('partials/_flash_messages.html.twig') }}
+{% endblock %}
+{# it's not mandatory to set the timezone in localizeddate(). This is done to
+   avoid errors when the 'intl' PHP extension is not available and the application
+   is forced to use the limited "intl polyfill", which only supports UTC and GMT #}
+{# <!-- Page rendered on {{ 'now'|localizeddate('long', 'long', null, 'UTC') }} --> #}
+</body>
+</html>

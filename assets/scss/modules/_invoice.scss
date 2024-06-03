@@ -1,0 +1,19 @@
+.invoice {
+  &__datatables, &__show {
+    &__status-comment {
+      color: red;
+    }
+  }
+
+  &__form {
+    &__limit-error {
+      font-size: 0.8rem;
+      color: $red;
+    }
+
+    &__tasks-maxlength {
+      font-size: 0.8rem;
+      color: $primary;
+    }
+  }
+}

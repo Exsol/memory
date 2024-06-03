@@ -1,0 +1,269 @@
+// ----------------------------------------------
+// WebSocketService Widget
+// ----------------------------------------------
+.chat-box{
+    //overflow: auto;
+    padding-bottom: 40px;
+}
+
+.right-part.chat-container,
+.right-part.invoice-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .chat-box-inner-part {
+        width: 100%;
+    }
+}
+
+.left-part.user-chat-box,
+.left-part.list-of-user {
+    height: 100vh;
+}
+
+.chatting-box,
+.invoiceing-box {
+    display: none;
+}
+.css--focus-input{
+    color: var(--bs-body-color);
+    background-color: #fff;
+    border-color: rgba(0, 0, 0, .25);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(54,153,255,.25);
+}
+.css-input-error {
+    color: var(--bs-body-color);
+    background-color: #fff;
+    border-color: rgba(0, 0, 0, .25);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(255, 0, 0, 0.25);
+}
+
+.chat-list {
+    margin: 0px;
+    padding: 0px;
+
+    .chat-item {
+        display: flex;
+        list-style: none;
+        margin-top: 30px;
+
+
+        .chat-img {
+            display: inline-block;
+            width: 45px;
+            vertical-align: top;
+            img {
+                width: 45px;
+                border-radius: 100%;
+            }
+        }
+        .chat-content {
+            max-width: 80%;
+
+            display: flex;
+            //padding-left: 15px;
+
+            @include media-breakpoint-up(xl) {
+                max-width: 33%;
+            }
+
+
+            h5 {
+                 
+            }
+            .box {
+                display: inline-block;
+                padding: 10px;
+                margin-bottom: 3px;
+
+                width: 100%;
+                //@media only screen and (max-width: 768px) {
+                //    max-width: 100%;
+                //}
+
+                color:#fff;
+                background: $gray-100;
+                p{
+                    margin: 0;
+                }
+                h6{
+                    margin: 0;
+                }
+                .chat-time {
+                    display: block;
+                    font-size: 10px;
+                    color: #fff;
+                    margin:5px 0 0 0;
+                }
+
+            }
+
+
+        }
+
+        &.odd {
+            justify-content: flex-end;
+
+            .chat-content {
+                display: flex;
+                justify-content: flex-end;
+                text-align: right;
+
+                //.attachment-block{
+                //    .attachment-block--item{
+                //        .attachment-block--item-action{
+                //            a:hover {
+                //                i{
+                //                    color: #0bb7af;
+                //                }
+                //            }
+                //        }
+                //    }
+                //}
+            }
+            .chat-time{
+                text-align:right;
+            }
+            .box {
+                clear: both;
+                color:$white;
+                background: $info;
+            }
+        }
+        &.odd + .odd, &.even + .even {
+            margin-top: 5px;
+        }
+        &.reverse {
+            text-align: right;
+            .chat-time {
+                text-align: left;
+            }
+            .chat-content {
+                padding-left: 0px;
+                padding-right: 15px;
+            }
+        }
+    }
+}
+
+
+// ----------------------------------------------
+// WebSocketService Widget
+// ----------------------------------------------
+
+.chat-box {
+    .chat {
+        display: none;
+        &.active-chat {
+            display: block;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .right-part.invoice-box {
+        display: block;
+        .chat-box-inner-part {
+            width: 100%;
+        }
+    }
+}
+
+@include media-breakpoint-only(md) {
+    .left-part.list-of-user {
+        position: fixed;
+        left: -$left-part-width;
+        background: $body-bg;
+        z-index: 1;
+        transition: 0.1s ease-in;
+        .show-left-part {
+            right: -107px;
+        }
+        // On visible state
+        // 
+        &.show-panel {
+            left: 65px;
+            .show-left-part {
+                right: -42px;
+            }
+        }
+    }
+    .right-part.invoice-box {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+
+.attachment-block {
+    min-width: 180px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+
+    @at-root .chat-item & {
+        max-width: 270px;
+    }
+
+    &--file-name {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &--item {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        text-align: left;
+    }
+
+
+    &--item-icon {
+        @include make-col(1);
+        i {
+            font-size: 35px;
+        }
+    }
+
+    &--item-actions {
+        @include make-col(2);
+        display: flex;
+    }
+
+    &--item-description {
+        @include make-col(9);
+        padding: 0 15px;
+        font-size: 12px;
+        font-weight: 100;
+    }
+
+    &--item-action {
+        a {
+            color: $gray-700;
+
+            @at-root .chat-item & {
+                color: #fff;
+            }
+        }
+        a:hover {
+            i {
+                color: $gray-500;
+
+                @at-root .chat-item & {
+                    color: $info;
+                }
+
+                @at-root .chat-item.odd & {
+                    color: #0bb7af;
+                }
+            }
+        }
+    }
+
+}
+
+

@@ -1,0 +1,50 @@
+.customer {
+
+  &__form-create {
+    background-color: #e8e8e8;
+    padding: 20px;
+    margin: 20px 0;
+
+    .typeahead {
+      &__result .row {
+        display: table-row;
+      }
+
+      &__result .row > * {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      &__result {
+        .email {
+          padding: 10px;
+        }
+
+        strong {
+          color: $primary;
+          font-weight: bold;
+        }
+
+        small {
+          color: $primary;
+        }
+      }
+
+      &_result .id {
+        font-size: 12px;
+        color: #777;
+        font-variant: small-caps;
+      }
+
+      &__result > ul > li > a small {
+        padding-left: 0px;
+        color: #999;
+      }
+
+      &__list {
+        max-height: 200px;
+        overflow: scroll;
+      }
+    }
+  }
+}

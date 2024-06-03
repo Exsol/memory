@@ -1,0 +1,9 @@
+.bootbox {
+  &-close-button{
+    @extend .btn;
+    @extend .btn-sm;
+    @extend .btn-danger;
+
+    float: right;
+  }
+}

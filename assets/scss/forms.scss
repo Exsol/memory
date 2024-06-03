@@ -1,0 +1,24 @@
+
+label {
+  font-weight: 300;
+}
+
+
+.in_place_edit, .in_place_edit_country {
+  cursor: pointer;
+  position: relative;
+
+  form {
+    margin: -1px 0 0 -1px;
+    width: 100%;
+
+    input {
+      border: 0;
+      margin: 0;
+      padding-bottom: -1px;
+      //border-bottom: 1px solid #e5e5e5;
+    }
+  }
+
+}
+
