@@ -1,0 +1,14 @@
+<div class="text-end">
+
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('admin_user_edit', {id: user.id}) }}"
+           class="btn btn-sm btn-primary" title="{{ 'action.edit'|trans }}">
+            <i class="fa fa-edit" aria-hidden="true"></i>
+        </a>
+
+        <a href="{{ path('admin_user_delete', {id: user.id}) }}"
+           class="btn btn-sm btn-danger" title="{{ 'action.delete'|trans }}">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </a>
+    {% endif %}
+</div>

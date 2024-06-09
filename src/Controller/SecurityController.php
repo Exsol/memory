@@ -43,6 +43,7 @@ class SecurityController extends AbstractController
     #[Route(path: '/login', name: 'security_login')]
     public function login(AuthenticationUtils $helper): Response
     {
+        dump($helper);
         return $this->render('security/login.html.twig', [
             // last username entered by the user (if any)
             'last_username' => $helper->getLastUsername(),
@@ -60,7 +61,7 @@ class SecurityController extends AbstractController
         }
         if ($this->security->isGranted('ROLE_MANAGER')) {
             return $this->redirectToRoute('admin_dashboard');
-        } elseif ($this->security->isGranted('ROLE_USER')) {
+        } elseif ($this->security->isGranted('ROLE_MEMBER')) {
             return $this->redirectToRoute('admin_dashboard');
         } else {
             return $this->redirectToRoute('admin_dashboard');

@@ -27,20 +27,6 @@ var Cookies = global.Cookies = require('js-cookie');
 
 import Routing from './fos_js_routing';
 
-// import UserClass from "./classes/class-user";
-// import WebserviceClass from "./classes/class-webservice";
-// var wsData = WebserviceClass.getWebServiceData($, Routing,Cookies);
-// if (wsData.uuid != '' && wsData.wssUrl != '') {
-//     var ws = new WebSocket(wsData.wssUrl+'?uuid=' + wsData.uuid);
-// }else {
-//     ws = null;
-// }
-
-var ws = new WebSocket($('meta[name="wss-url"]').attr('content'));
-
-import wsFunctions from "./modules/web-socket";
-wsFunctions($, ws);
-
 import ChartJs from "chart.js";
 import Chartist from "chartist";
 import "chartist-plugin-tooltips";
@@ -63,11 +49,6 @@ import date from '../extra-libs/formvalidation-es6/validators/date';
 import stringLength from '../extra-libs/formvalidation-es6/validators/stringLength';
 import digits from '../extra-libs/formvalidation-es6/validators/digits';
 
-import { Calendar } from '@fullcalendar/core';
-import interactionPlugin from '@fullcalendar/interaction';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
-import listPlugin from '@fullcalendar/list';
 
 global.FormValidation = FormValidation;
 global.Bootstrap5 = Bootstrap5;
@@ -138,57 +119,12 @@ contentUtil($);
 import mapsUtil from "./utils/maps-util";
 mapsUtil($);
 
-
-// config.placeholder_select = {
-//     placeholders: ["placeholder1_value", "placeholder2_value", "placeholder3_value"],
-//     toolLabel: 'Toolbar Label',
-//     toolTitle: 'Toolbar Title',
-//     listGroup: 'List Group Name'
-// };
-//
-// // placeholders list can also have additional info
-// config.placeholder_select = {
-//     placeholders: [
-//         {value: "placeholder1_value", text: "placeholder1_text", label: "<b>placeholder1_label</b>"},
-//         {value: "placeholder2_value", text: "placeholder2_text", label: "<b>placeholder2_label</b>"}
-//     ]
-// };
-
-import customerForm from './modules/customer-form';
-customerForm(Routing);
-
-import invoiceForm from './modules/invoice-form';
-invoiceForm();
-
-import todoFilterForm from "./modules/todo-filter-form";
-todoFilterForm($, Routing);
-
-import todoMessageForm from "./modules/todo-message-form";
-todoMessageForm($, Routing, ws);
-
 import App from './classes/class-app';
 App.Routing = Routing;
 global.App = App;
 import FormAjaxLoader from './classes/class-form-ajax-loader';
 global.FormAjaxLoader = FormAjaxLoader;
 
-import calendarJs from './modules/calendar';
-calendarJs($, Routing);
-
-import todoForm from "./modules/todo-form";
-todoForm($, Routing);
-
-import statsTaskControlHubShiftDailyPerformanceForm from "./modules/task-control-filter-form";
-statsTaskControlHubShiftDailyPerformanceForm($, Routing);
-
-import divisionForm from "./modules/division-form";
-divisionForm($, Routing);
-
-import userForm from "./modules/user-form";
-userForm($, Routing);
-
-import todoShow from "./modules/todo-show";
-todoShow($, Routing);
 
 import '../bootstrap';
 

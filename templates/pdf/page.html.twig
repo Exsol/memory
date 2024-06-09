@@ -1,0 +1,63 @@
+{% extends 'pdf/base.html.twig' %}
+
+{% block inlinestyles %}
+    <style>
+        @page {
+            margin: 1.2cm 1.2cm 1.2cm 2cm;
+        }
+
+        .pdf__title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1, h2, h3 {
+            font-size: 1.2rem;
+        }
+
+        h4, h5, h6 {
+            font-size: 1.1rem;
+        }
+
+        p, td, .pdf__signature-place {
+            line-height: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        .text-center {
+            text-align: center;
+            width: 95%;
+            display: block;
+            margin: 0 auto;
+
+        }
+        .addition-info{
+            margin-top: 10px;
+        }
+        .ul-list li{
+            margin-top: 5px;
+        }
+
+    </style>
+{% endblock %}
+
+{% block main %}
+    <div class="pdf">
+        <div class="pdf__page">
+
+            <img src="{{ qrCode }}" class="text-center">
+
+            <div class="addition-info">
+                <h2>Как отсканировать QR-код с помощью смартфона?</h2>
+                <p>Отсканировать QR-код с помощью современного смартфона очень просто. Выполните следующие шаги:</p>
+                <ul class="ul-list">
+                    <li>Откройте приложение камеры. Просто запустите приложение «Камера» на своем телефоне.</li>
+                    <li>Наведите камеру на QR-код. Наведите камеру на QR-код, который необходимо отсканировать. Убедитесь, что он помещается в кадр.</li>
+                    <li>Дождитесь появления всплывающего окна. Как только камера распознает QR-код, на экране появится всплывающее уведомление.</li>
+                    <li> Коснитесь, чтобы получить доступ. Нажмите на всплывающее уведомление, чтобы получить доступ к информации, хранящейся в QR-коде.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -14,11 +14,13 @@
             <b class="logo-icon">
                 <!--You can put here icon as card // <i class="wi wi-sunset"></i> //-->
                 <!-- Dark Logo icon -->
-{#                <img src="{{ asset('assets/images/logo.png') }}" alt="homepage" class="dark-logo"/>#}
-                <img src="https://frankfurt.apollo.olxcdn.com/v1/files/id0mx57kj0t52-UZ/image;s=65x0;q=50" alt="homepage" />
+                {#                <img src="{{ asset('assets/images/logo.png') }}" alt="homepage" class="dark-logo"/> #}
+                <img src="https://frankfurt.apollo.olxcdn.com/v1/files/id0mx57kj0t52-UZ/image;s=65x0;q=50"
+                     alt="homepage"/>
                 <!-- Light Logo icon -->
-{#                <img src="{{ asset('assets/images/logo-light.png') }}" alt="homepage" class="light-logo"/>#}
-                <img src="https://frankfurt.apollo.olxcdn.com/v1/files/id0mx57kj0t52-UZ/image;s=120x0;q=50" alt="homepage" class="light-logo"/>
+                {#                <img src="{{ asset('assets/images/logo-light.png') }}" alt="homepage" class="light-logo"/> #}
+                <img src="https://frankfurt.apollo.olxcdn.com/v1/files/id0mx57kj0t52-UZ/image;s=120x0;q=50"
+                     alt="homepage" class="light-logo"/>
             </b>
             <!--End Logo icon -->
             <!-- Logo text -->
@@ -44,41 +46,41 @@
     </div>
 
 
-    <div class="scroll-sidebar css--pc-navigation" >
+    <div class="scroll-sidebar css--pc-navigation">
         <nav class="sidebar-nav">
-{#            {{ knp_menu_render('sidebarnav') }}#}
+          {{ knp_menu_render('sidebarnav') }}
         </nav>
     </div>
     <div class="navbar-collapse collapse {{ is_granted('IS_IMPERSONATOR') ? 'bg-danger' }}"
          id="navbarSupportedContent">
-{#        {{ knp_menu_render('mainnav') }}#}
+        {#        {{ knp_menu_render('mainnav') }} #}
         <ul class="navbar-nav ms-auto">
 
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle waves-effect waves-dark" data-bs-toggle="dropdown"
                    role="button"
                    aria-expanded="false" id="locales">
-                    <i class="flag-icon flag-icon-{% if app.request.locale == 'en' %}ru{% else %}{{ app.request.locale }}{% endif %}"></i>
+                    <i class="flag-icon flag-icon-{% if app.request.locale == 'ru' %}ru{% else %}{{ app.request.locale }}{% endif %}"></i>
                     <span class="sr-only">{{ 'menu.choose_language'|trans }}</span>
                 </a>
                 <div class="dropdown-menu locales dropdown-menu-end dropdown-menu-animate-up" role="menu"
                      aria-labelledby="locales">
 
-{#                    {% if locales %}#}
-{#                        {% for locale in locales() %}#}
-{#                            #}{# <li {% if app.request.locale == locale.code %}aria-checked="true" #}
-{#                            #}{# class="nav-item active pl-2 pr-2" {% else %}aria-checked="false" #}
-{#                            #}{# class="nav-item pl-2 pr-2"{% endif %} #}
-{#                            #}{# role="menuitem"> #}
+                    {#                    {% if locales %} #}
+                    {#                        {% for locale in locales() %} #}
+                    {#                            #}{# <li {% if app.request.locale == locale.code %}aria-checked="true" #}
+                    {#                            #}{# class="nav-item active pl-2 pr-2" {% else %}aria-checked="false" #}
+                    {#                            #}{# class="nav-item pl-2 pr-2"{% endif %} #}
+                    {#                            #}{# role="menuitem"> #}
 
-{#                            <a class="dropdown-item"#}
-{#                               href="{{ path('change_admin_language', {'locale': locale.code}) }}">#}
-{#                                <i class="me-2 flag-icon flag-icon-{% if locale.code == 'en' %}gb{% else %}{{ locale.code }}{% endif %}"></i>#}
-{#                                {{ locale.name|capitalize }}#}
-{#                            </a>#}
-{#                            #}{# </li> #}
-{#                        {% endfor %}#}
-{#                    {% endif %}#}
+                    {#                            <a class="dropdown-item" #}
+                    {#                               href="{{ path('change_admin_language', {'locale': locale.code}) }}"> #}
+                    {#                                <i class="me-2 flag-icon flag-icon-{% if locale.code == 'en' %}gb{% else %}{{ locale.code }}{% endif %}"></i> #}
+                    {#                                {{ locale.name|capitalize }} #}
+                    {#                            </a> #}
+                    {#                            #}{# </li> #}
+                    {#                        {% endfor %} #}
+                    {#                    {% endif %} #}
 
                     <span class="with-arrow"><span class="bg-white"></span></span>
                     <ul class="list-style-none">
@@ -108,16 +110,16 @@
                                         <h4>{{ impersonatorUser.username }}</h4>{% endif %}
                                     <p class="mt-2 mb-0">{{ 'title.simulating_user'|trans }}</p>
                                 {% endif %}
-{#                                <h4 class="mb-0">{{ app.user.firstName }} {{ app.user.lastName }}</h4>#}
+                                {#                                <h4 class="mb-0">{{ app.user.firstName }} {{ app.user.lastName }}</h4> #}
                                 <p class=" mb-0">{{ app.user.email }}</p>
                             </div>
                         </div>
-{#                        <a class="dropdown-item" href="{{ path('profile_edit') }}">#}
-{#                            <i class="mdi mdi-account m-r-5 m-l-5"></i> {{ 'menu.edit_profile'|trans }}#}
-{#                        </a>#}
-{#                        <a class="dropdown-item" href="{{ path('profile_change_password') }}">#}
-{#                            <i class="mdi mdi-shield-outline m-r-5 m-l-5"></i> {{ 'menu.change_password'|trans }}#}
-{#                        </a>#}
+                        {#                        <a class="dropdown-item" href="{{ path('profile_edit') }}"> #}
+                        {#                            <i class="mdi mdi-account m-r-5 m-l-5"></i> {{ 'menu.edit_profile'|trans }} #}
+                        {#                        </a> #}
+                        {#                        <a class="dropdown-item" href="{{ path('profile_change_password') }}"> #}
+                        {#                            <i class="mdi mdi-shield-outline m-r-5 m-l-5"></i> {{ 'menu.change_password'|trans }} #}
+                        {#                        </a> #}
                         <div class="dropdown-divider"></div>
                         <div>
                             <a class="dropdown-item" href="{{ path('security_logout') }}">

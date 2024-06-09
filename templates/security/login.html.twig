@@ -97,7 +97,7 @@
 
 {% block javascripts %}
     {{ parent() }}
-
+{{ dump(error) }}
     <script>
         {% if error %}
         toastr.error('', '{{ error.messageKey|trans(error.messageData, 'security') }}');

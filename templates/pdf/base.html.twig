@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% block stylesheets %}
+{#        {{ encore_entry_link_tags('pdf-styles') }}#}
+    {% endblock %}
+    {% block inlinestyles %}{% endblock %}
+</head>
+<body>
+{% block main %}{% endblock %}
+</body>
+</html>

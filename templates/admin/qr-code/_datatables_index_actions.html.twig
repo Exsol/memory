@@ -1,0 +1,21 @@
+<div class="text-center">
+
+    {% if is_granted('ROLE_MANAGER') %}
+
+        <a href="{{ path('admin_qrcode_view', {id: qrcode.id}) }}"
+           class="btn btn-sm btn-success" title="{{ 'action.print'|trans }}" target="_blank">
+            <i class="fa fa-print" aria-hidden="true"></i>
+        </a>
+
+{#        <a href="{{ path('admin_qrcode_edit', {id: qrcode.id}) }}"#}
+{#           class="btn btn-sm btn-primary" title="{{ 'action.edit'|trans }}">#}
+{#            <i class="fa fa-edit" aria-hidden="true"></i>#}
+{#        </a>#}
+
+        <a href="{{ path('admin_qrcode_delete', {id: qrcode.id}) }}"
+           class="btn btn-sm btn-danger" title="{{ 'action.delete'|trans }}">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </a>
+
+    {% endif %}
+</div>
