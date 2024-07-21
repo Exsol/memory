@@ -38,9 +38,9 @@ function escapeRegExp(string){
 			// Register dialog.
 			CKEDITOR.dialog.add( 'token', this.path + 'dialogs/token.js' );
 
-			// Put ur init code here.
+			// Put ur init person here.
 			editor.widgets.add( 'token', {
-				// Widget code.
+				// Widget person.
 				dialog: 'token',
 				pathName: lang.pathName,
 				// We need to have wrapping element, otherwise there are issues in
@@ -93,7 +93,7 @@ function escapeRegExp(string){
 						return;
 
 					return text.replace( tokenReplaceRegex, function( match ) {
-						// Creating widget code.
+						// Creating widget person.
 						var widgetWrapper = null,
 							innerElement = new CKEDITOR.htmlParser.element( 'span', {
 								'class': 'cke_token'

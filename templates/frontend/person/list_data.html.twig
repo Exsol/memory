@@ -1,0 +1,65 @@
+{% extends 'front-base.html.twig' %}
+
+{% block body_id 'list_data' %}
+
+{% block body %}
+    <div class="container-fluid">
+
+        <div class="card gredient-info-bg m-t-0 m-b-0">
+            <div class="card-body">
+                <h4 class="card-title text-white">{{'label.welcome'|trans }}</h4>
+                <h5 class="card-subtitle text-white op-5">{{'label.person.list_data'|trans }}</h5>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            {% for qrCode in qrCodes %}
+
+                <div class="col-lg-3 col-md-6 col-xl-3">
+                    <!-- Card -->
+                    <div class="card">
+                        <img class="card-img-top img-responsive" src="/img/{{ qrCode.memory.mainPhoto|default('') }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ qrCode.memory.lastName|default('') }} {{ qrCode.memory.firstName|default('') }} {{ qrCode.memory.patronymic|default('') }}</h4>
+                            <p class="card-text">
+                                {{ qrCode.memory.dateBirth|date('d.m.Y') }} - {{ qrCode.memory.dateDeads|date('d.m.Y') }}
+                            </p>
+                            <a href="{{ path('edit_person_page', {uuid: qrCode.uuid|default('')}) }}"
+                               class="btn btn-sm btn-secondary" title="{{ 'action.person.edit'|trans }}" target="_blank">
+                                <i class="fa fa-edit" aria-hidden="true"></i> {{ 'action.person.edit'|trans }}
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Card -->
+                </div>
+            {% endfor %}
+
+        </div>
+
+
+
+
+
+
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+
+        $(function () {
+
+
+        });
+
+
+    </script>
+
+
+
+
+
+{% endblock %}

@@ -853,12 +853,12 @@ define(["eve"], function(eve) {
      > Parameters
      - colour (string) colour string in one of formats:
      # <ul>
-     #     <li>Colour name (“<code>red</code>”, “<code>green</code>”, “<code>cornflowerblue</code>”, etc)</li>
-     #     <li>#••• — shortened HTML colour: (“<code>#000</code>”, “<code>#fc0</code>”, etc)</li>
-     #     <li>#•••••• — full length HTML colour: (“<code>#000000</code>”, “<code>#bd2300</code>”)</li>
-     #     <li>rgb(•••, •••, •••) — red, green and blue channels’ values: (“<code>rgb(200,&nbsp;100,&nbsp;0)</code>”)</li>
-     #     <li>rgb(•••%, •••%, •••%) — same as above, but in %: (“<code>rgb(100%,&nbsp;175%,&nbsp;0%)</code>”)</li>
-     #     <li>hsb(•••, •••, •••) — hue, saturation and brightness values: (“<code>hsb(0.5,&nbsp;0.25,&nbsp;1)</code>”)</li>
+     #     <li>Colour name (“<person>red</person>”, “<person>green</person>”, “<person>cornflowerblue</person>”, etc)</li>
+     #     <li>#••• — shortened HTML colour: (“<person>#000</person>”, “<person>#fc0</person>”, etc)</li>
+     #     <li>#•••••• — full length HTML colour: (“<person>#000000</person>”, “<person>#bd2300</person>”)</li>
+     #     <li>rgb(•••, •••, •••) — red, green and blue channels’ values: (“<person>rgb(200,&nbsp;100,&nbsp;0)</person>”)</li>
+     #     <li>rgb(•••%, •••%, •••%) — same as above, but in %: (“<person>rgb(100%,&nbsp;175%,&nbsp;0%)</person>”)</li>
+     #     <li>hsb(•••, •••, •••) — hue, saturation and brightness values: (“<person>hsb(0.5,&nbsp;0.25,&nbsp;1)</person>”)</li>
      #     <li>hsb(•••%, •••%, •••%) — same as above, but in %</li>
      #     <li>hsl(•••, •••, •••) — same as hsb</li>
      #     <li>hsl(•••%, •••%, •••%) — same as hsb</li>

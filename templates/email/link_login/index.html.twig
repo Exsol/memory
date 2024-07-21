@@ -1,0 +1,20 @@
+{% extends 'email/layout/base.html.twig' %}
+
+{% block introText %}
+
+
+
+    <p>Ваша ссылка для редактирования будет доступна в течении 10 миинут после получения этого сообщения.</p>
+
+    <a href="{{ action_url }}" class="button button-{{ color|default('blue') }}" target="_blank">Перейти</a>
+
+
+
+{% endblock %}
+
+{% block outroText %}{% endblock %}
+
+{% block main %}
+    {{ parent() }}
+{% endblock %}
+

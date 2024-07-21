@@ -18,7 +18,7 @@
 		if ( requires.length ) {
 			for ( i = 0; i < requires.length; i++ ) {
 				if ( !editor.plugins[ requires[ i ] ] )
-					missing.push( '<code>' + requires[ i ] + '</code>' );
+					missing.push( '<person>' + requires[ i ] + '</person>' );
 			}
 
 			if ( missing.length ) {

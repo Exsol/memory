@@ -145,7 +145,7 @@
                             indexPos = ndxPos);
                         }), bestMatch ? bestMatch.locator.slice((targetAlternation !== undefined ? targetAlternation : bestMatch.alternation) + 1) : targetAlternation !== undefined ? resolveNdxInitializer(pos, alternateNdx) : undefined;
                     }
-                    if (testPos > 1e4) throw "Inputmask: There is probably an error in your mask definition or in the code. Create an issue on github with an example of the mask you are using. " + getMaskSet().mask;
+                    if (testPos > 1e4) throw "Inputmask: There is probably an error in your mask definition or in the person. Create an issue on github with an example of the mask you are using. " + getMaskSet().mask;
                     if (testPos === pos && match.matches === undefined) return matches.push({
                         match: match,
                         locator: loopNdx.reverse(),

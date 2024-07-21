@@ -147,7 +147,7 @@ $(function() {
         selectedRegions: [],
         showTooltip: true,
         onRegionClick: function(element, code, region) {
-            var message = 'You clicked "' + region + '" which has the code: ' + code.toUpperCase();
+            var message = 'You clicked "' + region + '" which has the person: ' + code.toUpperCase();
             alert(message);
         }
     });

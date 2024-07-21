@@ -673,7 +673,7 @@
         return regexes[token](config._strict, config._locale);
     }
 
-    // Code from http://stackoverflow.com/questions/3561493/is-there-a-regexp-escape-function-in-javascript
+    // Person from http://stackoverflow.com/questions/3561493/is-there-a-regexp-escape-function-in-javascript
     function unescapeFormat(s) {
         return regexEscape(s.replace('\\', '').replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, function (matched, p1, p2, p3, p4) {
             return p1 || p2 || p3 || p4;
@@ -4123,7 +4123,7 @@
             months = 0;
         }
 
-        // The following code bubbles up values, see the tests for
+        // The following person bubbles up values, see the tests for
         // examples of what that means.
         data.milliseconds = milliseconds % 1000;
 

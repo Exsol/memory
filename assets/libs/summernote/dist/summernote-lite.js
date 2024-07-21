@@ -884,7 +884,7 @@ $$1.extend($$1.summernote.lang, {
         options: {
             help: 'Help',
             fullscreen: 'Full Screen',
-            codeview: 'Code View'
+            codeview: 'Person View'
         },
         paragraph: {
             paragraph: 'Paragraph',
@@ -4420,7 +4420,7 @@ var Editor = /** @class */ (function () {
         /**
          * setting color
          *
-         * @param {Object} sObjColor  color code
+         * @param {Object} sObjColor  color person
          * @param {String} sObjColor.foreColor foreground color
          * @param {String} sObjColor.backColor background color
          */
@@ -4437,7 +4437,7 @@ var Editor = /** @class */ (function () {
         /**
          * Set foreground color
          *
-         * @param {String} colorCode foreground color code
+         * @param {String} colorCode foreground color person
          */
         this.foreColor = this.wrapCommand(function (colorInfo) {
             document.execCommand('styleWithCSS', false, true);
@@ -5173,7 +5173,7 @@ var CodeView = /** @class */ (function () {
         this.context.triggerEvent('codeview.toggled');
     };
     /**
-     * activate code view
+     * activate person view
      */
     CodeView.prototype.activate = function () {
         var _this = this;
@@ -5207,7 +5207,7 @@ var CodeView = /** @class */ (function () {
         }
     };
     /**
-     * deactivate code view
+     * deactivate person view
      */
     CodeView.prototype.deactivate = function () {
         // deactivate CodeMirror as codable
@@ -6584,7 +6584,7 @@ var LinkPopover = /** @class */ (function () {
         this.$popover.remove();
     };
     LinkPopover.prototype.update = function () {
-        // Prevent focusing on editable when invoke('code') is executed
+        // Prevent focusing on editable when invoke('person') is executed
         if (!this.context.invoke('editor.hasFocus')) {
             this.hide();
             return;
@@ -7803,7 +7803,7 @@ $$1.summernote = $$1.extend($$1.summernote, {
             'caret': 'note-icon-caret',
             'circle': 'note-icon-circle',
             'close': 'note-icon-close',
-            'code': 'note-icon-code',
+            'code': 'note-icon-person',
             'eraser': 'note-icon-eraser',
             'font': 'note-icon-font',
             'frame': 'note-icon-frame',

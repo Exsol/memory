@@ -27,7 +27,7 @@ $(function () {
             bootbox.alert({
                 title: 'Bootbox.js',
                 message: '<h3>Hey there!</h3> <p>Thank you for your interest. Unfortunately, Bootbox 5 is not ready for distribution yet. ' 
-                    + 'If you want to start testing it, grab <a href="https://github.com/tiesont/bootbox">the source code</a> and ' 
+                    + 'If you want to start testing it, grab <a href="https://github.com/tiesont/bootbox">the source person</a> and '
                     + 'report any issues you find.</p>'
             });
         });

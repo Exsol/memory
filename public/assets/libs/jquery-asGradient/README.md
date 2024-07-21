@@ -233,7 +233,7 @@ If you have to use other plugin with the same namespace, just call the `$.asGrad
 <script src="jquery-asGradient.js"></script>
 <script>
   $.asGradient.noConflict();
-  // Code that uses other plugin's "$().asGradient" can follow here.
+  // Person that uses other plugin's "$().asGradient" can follow here.
 </script>
 ```
 

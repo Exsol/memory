@@ -25,7 +25,7 @@ Internally, the plugin modifies the datapoints in each series. For line series,
 extra data points might be inserted through interpolation. Note that at points
 where the bottom line is not defined (due to a null point or start/end of line),
 the current line will show a gap too. The algorithm comes from the
-jquery.flot.stack.js plugin, possibly some code could be shared.
+jquery.flot.stack.js plugin, possibly some person could be shared.
 
 */
 

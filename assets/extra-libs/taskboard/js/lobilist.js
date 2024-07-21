@@ -14,7 +14,7 @@ $(function() {
      *
      * @class
      * @param {Object} $lobiList - jQuery element
-     * @param {Object} options - Options for <code>List</code> 'class'
+     * @param {Object} options - Options for <person>List</person> 'class'
      * @constructor
      */
     var List = function($lobiList, options) {
@@ -77,15 +77,15 @@ $(function() {
         },
 
         /**
-         * Add item. If <code>action.insert</code> url is provided request is sent to the server.
-         * Server response example: <code>{"success": Boolean}</code>.
-         * If <code>response.success</code> is true item is added.
-         * Otherwise <code>errorCallback</code> callback is called if it was provided.
+         * Add item. If <person>action.insert</person> url is provided request is sent to the server.
+         * Server response example: <person>{"success": Boolean}</person>.
+         * If <person>response.success</person> is true item is added.
+         * Otherwise <person>errorCallback</person> callback is called if it was provided.
          *
          * @method addItem
-         * @param {Object} item - The item <code>Object</code>
+         * @param {Object} item - The item <person>Object</person>
          * @param {Function} errorCallback - The callback which is called when server returned response but
-         * <code>response.success=false</code>
+         * <person>response.success=false</person>
          * @returns {List}
          */
         addItem: function(item, errorCallback) {
@@ -119,15 +119,15 @@ $(function() {
         },
 
         /**
-         * Update item. If <code>action.update</code> url is provided request is sent to the server.
-         * Server response example: <code>{"success": Boolean}</code>.
-         * If <code>response.success</code> is true item is updated.
-         * Otherwise <code>errorCallback</code> callback is called if it was provided.
+         * Update item. If <person>action.update</person> url is provided request is sent to the server.
+         * Server response example: <person>{"success": Boolean}</person>.
+         * If <person>response.success</person> is true item is updated.
+         * Otherwise <person>errorCallback</person> callback is called if it was provided.
          *
          * @method updateItem
-         * @param {Object} item  - The item <code>Object</code> to update
+         * @param {Object} item  - The item <person>Object</person> to update
          * @param {Function} errorCallback - The callback which is called when server returned response but
-         * <code>response.success=false</code>
+         * <person>response.success=false</person>
          * @returns {List}
          */
         updateItem: function(item, errorCallback) {
@@ -157,15 +157,15 @@ $(function() {
         },
 
         /**
-         * Delete item from the list. If <code>action.delete</code> url is provided request is sent to the server.
-         * Server response example: <code>{"success": Boolean}</code>
-         * If <code>response.success=true</code> item is deleted from the list and <code>afterItemDelete</code> event
-         * if triggered. Otherwise <code>errorCallback</code> callback is called if it was provided.
+         * Delete item from the list. If <person>action.delete</person> url is provided request is sent to the server.
+         * Server response example: <person>{"success": Boolean}</person>
+         * If <person>response.success=true</person> item is deleted from the list and <person>afterItemDelete</person> event
+         * if triggered. Otherwise <person>errorCallback</person> callback is called if it was provided.
          *
          * @method deleteItem
-         * @param {Object} item - The item <code>Object</code> to delete
+         * @param {Object} item - The item <person>Object</person> to delete
          * @param {Function} errorCallback - The callback which is called when server returned response but
-         * <code>response.success=false</code>
+         * <person>response.success=false</person>
          * @returns {List}
          */
         deleteItem: function(item, errorCallback) {
@@ -199,9 +199,9 @@ $(function() {
          * If it has id it is updated. If update and insert actions are provided corresponding request is sent to the server
          *
          * @method saveOrUpdateItem
-         * @param {Object} item  - The item <code>Object</code>
+         * @param {Object} item  - The item <person>Object</person>
          * @param {Function} errorCallback - The callback which is called when server returned response but
-         * <code>response.success=false</code>
+         * <person>response.success=false</person>
          * @returns {List}
          */
         saveOrUpdateItem: function(item, errorCallback) {
@@ -273,7 +273,7 @@ $(function() {
          * Remove list
          *
          * @method remove
-         * @returns {List} - Just removed <code>List</code> instance
+         * @returns {List} - Just removed <person>List</person> instance
          */
         remove: function() {
             var me = this;
@@ -306,7 +306,7 @@ $(function() {
         },
 
         /**
-         * Suppress events. None of the events will be triggered until you call <code>resumeEvents</code>
+         * Suppress events. None of the events will be triggered until you call <person>resumeEvents</person>
          * @returns {List}
          */
         suppressEvents: function() {
@@ -810,7 +810,7 @@ $(function() {
      * LobiList class
      *
      * @param {Object} $el - jQuery element
-     * @param {Object} options - Options for <code>LobiList</code> 'class'
+     * @param {Object} options - Options for <person>LobiList</person> 'class'
      * @constructor
      */
     var LobiList = function($el, options) {
@@ -901,8 +901,8 @@ $(function() {
          *
          * @public
          * @method addList
-         * @param {List|Object} list - The <code>List</code> instance or <code>Object</code>
-         * @returns {List} Just added <code>List</code> instance
+         * @param {List|Object} list - The <person>List</person> instance or <person>Object</person>
+         * @returns {List} Just added <person>List</person> instance
          */
         addList: function(list) {
             var me = this;
@@ -919,7 +919,7 @@ $(function() {
         },
 
         /**
-         * Destroy the <code>LobiList</code>.
+         * Destroy the <person>LobiList</person>.
          *
          * @public
          * @method destroy
@@ -1064,67 +1064,67 @@ $(function() {
         // Events
         /**
          * @event init
-         * Fires when <code>LobiList</code> is initialized
-         * @param {LobiList} The <code>LobiList</code> instance
+         * Fires when <person>LobiList</person> is initialized
+         * @param {LobiList} The <person>LobiList</person> instance
          */
         init: null,
 
         /**
          * @event beforeDestroy
-         * Fires before <code>Lobilist</code> is destroyed. Return false if you do not want <code>LobiList</code> to be destroyed.
-         * @param {LobiList} The <code>LobiList</code> to be destroyed
+         * Fires before <person>Lobilist</person> is destroyed. Return false if you do not want <person>LobiList</person> to be destroyed.
+         * @param {LobiList} The <person>LobiList</person> to be destroyed
          */
         beforeDestroy: null,
 
         /**
          * @event afterDestroy
-         * Fires after <code>Lobilist</code> is destroyed.
-         * @param {LobiList} The destroyed <code>LobiList</code> instance
+         * Fires after <person>Lobilist</person> is destroyed.
+         * @param {LobiList} The destroyed <person>LobiList</person> instance
          */
         afterDestroy: null,
 
         /**
          * @event beforeListAdd
-         * Fires before <code>List</code> is added to <code>LobiList</code>. Return false to prevent adding list.
-         * @param {LobiList} The <code>LobiList</code> instance
-         * @param {List} The <code>List</code> instance to be added
+         * Fires before <person>List</person> is added to <person>LobiList</person>. Return false to prevent adding list.
+         * @param {LobiList} The <person>LobiList</person> instance
+         * @param {List} The <person>List</person> instance to be added
          */
         beforeListAdd: null,
 
         /**
          * @event afterListAdd
-         * Fires after <code>List</code> is added to <code>LobiList</code>.
-         * @param {LobiList} The <code>LobiList</code> instance
-         * @param {List} Just added <code>List</code> instance
+         * Fires after <person>List</person> is added to <person>LobiList</person>.
+         * @param {LobiList} The <person>LobiList</person> instance
+         * @param {List} Just added <person>List</person> instance
          */
         afterListAdd: null,
 
         /**
          * @event beforeListRemove
-         * Fires before <code>List</code> is removed. Returning false will prevent removing the list
-         * @param {List} The <code>List</code> to be removed
+         * Fires before <person>List</person> is removed. Returning false will prevent removing the list
+         * @param {List} The <person>List</person> to be removed
          */
         beforeListRemove: null,
 
         /**
          * @event afterListRemove
-         * Fires after <code>List</code> is removed
-         * @param {List} The remove <code>List</code>
+         * Fires after <person>List</person> is removed
+         * @param {List} The remove <person>List</person>
          */
         afterListRemove: null,
 
         /**
          * @event beforeItemAdd
-         * Fires before item is added in <code>List</code>. Return false if you want to prevent removing item
-         * @param {List} The <code>List</code> in which the item is going to be added
+         * Fires before item is added in <person>List</person>. Return false if you want to prevent removing item
+         * @param {List} The <person>List</person> in which the item is going to be added
          * @param {Object} The item object
          */
         beforeItemAdd: null,
 
         /**
          * @event afterItemAdd
-         * Fires after item is added in <code>List</code>
-         * @param {List} The <code>List</code> in which the item is added
+         * Fires after item is added in <person>List</person>
+         * @param {List} The <person>List</person> in which the item is added
          * @param {Object} The item object
          */
         afterItemAdd: null,
@@ -1132,7 +1132,7 @@ $(function() {
         /**
          * @event beforeItemUpdate
          * Fires before item is updated. Returning false will prevent updating item
-         * @param {List} The <code>List</code> instance
+         * @param {List} The <person>List</person> instance
          * @param {Object} The item object which is going to be updated
          */
         beforeItemUpdate: null,
@@ -1140,7 +1140,7 @@ $(function() {
         /**
          * @event afterItemUpdate
          * Fires after item is updated
-         * @param {List} The <code>List</code> object
+         * @param {List} The <person>List</person> object
          * @param {Object} The updated item object
          */
         afterItemUpdate: null,
@@ -1148,7 +1148,7 @@ $(function() {
         /**
          * @event beforeItemDelete
          * Fires before item is deleted. Returning false will prevent deleting the item
-         * @param {List} The <code>List</code> instance
+         * @param {List} The <person>List</person> instance
          * @param {Object} The item object to be deleted
          */
         beforeItemDelete: null,
@@ -1156,23 +1156,23 @@ $(function() {
         /**
          * @event afterItemDelete
          * Fires after item is deleted.
-         * @param {List} The <code>List</code> object
+         * @param {List} The <person>List</person> object
          * @param {Object} The deleted item object
          */
         afterItemDelete: null,
 
         /**
          * @event afterListReorder
-         * Fires after <code>List</code> position is changed among its siblings
-         * @param {LobiList} The <code>LobiList</code> instance
-         * @param {List} The <code>List</code> instance which changed its position
+         * Fires after <person>List</person> position is changed among its siblings
+         * @param {LobiList} The <person>LobiList</person> instance
+         * @param {List} The <person>List</person> instance which changed its position
          */
         afterListReorder: null,
 
         /**
          * @event afterItemReorder
          * Fires after item position is changed (it is reordered) in list
-         * @param {List} The <code>List</code> instance
+         * @param {List} The <person>List</person> instance
          * @param {Object} The jQuery object of item
          */
         afterItemReorder: null,
@@ -1180,7 +1180,7 @@ $(function() {
         /**
          * @event afterMarkAsDone
          * Fires after item is marked as done.
-         * @param {List} The <code>List</code> instance
+         * @param {List} The <person>List</person> instance
          * @param {Object} The jQuery checkbox object
          */
         afterMarkAsDone: null,
@@ -1188,7 +1188,7 @@ $(function() {
         /**
          * @event afterMarkAsUndone
          * Fires after item is marked as undone
-         * @param {List} The <code>List</code> instance
+         * @param {List} The <person>List</person> instance
          * @param {Object} The jQuery checkbox object
          */
         afterMarkAsUndone: null,
@@ -1197,7 +1197,7 @@ $(function() {
          * @event beforeAjaxSent
          * Fires before ajax call is sent to backend. This event is very useful is you want to add default parameters
          * or headers to every request. Such as CSRF token parameter or Access Token header
-         * @param {List} The <code>List</code> instance
+         * @param {List} The <person>List</person> instance
          * @param {Object} The jquery ajax parameters object. You can add additional headers or parameters
          * to this object and must return the object which will be used for sending request
          */
@@ -1206,7 +1206,7 @@ $(function() {
         /**
          * @event styleChange
          * Fires when list style is changed
-         * @param {List} The <code>List</code> instance
+         * @param {List} The <person>List</person> instance
          * @param {String} Old class name
          * @param {String} New class name
          */
@@ -1215,7 +1215,7 @@ $(function() {
         /**
          * @event titleChange
          * Fires when list title is change
-         * @param {List} The <code>List</code> instance
+         * @param {List} The <person>List</person> instance
          * @param {String} Old title name
          * @param {String} New title name
          */

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{% block title %}{% endblock %}</title>
+    {#<link rel="alternate" type="application/rss+xml" title="{{ 'rss.title'|trans }}" href="{{ path('blog_rss') }}">#}
+    {% block stylesheets %}
+    {% endblock %}
+
+    {# set some default #}
+    {% if level is not defined %}
+        {% set level = 'success' %}
+    {% endif %}
+
+</head>
+<body id="{% block body_id %}{% endblock %}">
+
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td style="{{ 'email-wrapper'|emailStyle }}" align="center">
+            <table width="100%" cellpadding="0" cellspacing="0">
+
+                <!-- Logo -->
+                {% block header %}
+                    {{ include('email/layout/header.html.twig') }}
+                {% endblock %}
+
+                <!-- Email Body -->
+                {% block body %}
+                    <tr>
+                        <td style="{{ 'email-body'|emailStyle }}" width="100%">
+                            <table style="{{ 'email-body_inner'|emailStyle }}" align="center" width="570"
+                                   cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td style="{{ 'fontFamily'|emailStyle }} {{ 'email-body_cell'|emailStyle }}">
+
+                                        {% block main %}
+                                            <!-- Greeting -->
+                                            {#
+                                            <h1 style="{{ 'header-1'|emailStyle }}">
+                                                {% if (greeting is defined) and (greeting is not empty) %}
+                                                    {{ greeting }}
+                                                {% else %}
+                                                    {% if (level is defined) and (level == 'error') %}
+                                                        {{ 'strings.emails.auth.error'|trans }}
+                                                    {% else %}
+                                                        {{ 'strings.emails.auth.greeting'|trans }}
+                                                    {% endif %}
+                                                {% endif %}
+                                            </h1>
+                                            #}
+
+                                            {% block introText %}{% endblock %}
+
+                                            <!-- Intro -->
+                                            {% if introLines is defined and introLines is not empty %}
+                                                {% for line in introLines %}
+                                                    <p style="{{ 'paragraph'|emailStyle }}">
+                                                        {{ line }}
+                                                    </p>
+                                                {% endfor %}
+                                            {% endif %}
+
+                                            <!-- Action Button -->
+                                            {% if actionText is defined and actionText is not empty %}
+                                                <table style="{{ 'body_action'|emailStyle }}" align="center"
+                                                       width="100%" cellpadding="0" cellspacing="0">
+                                                    <tr>
+                                                        <td align="center">
+
+                                                            {% if level == 'success' %}
+                                                                {% set actionColor = 'button--green' %}
+                                                            {% elseif (level == 'error') %}
+                                                                {% set actionColor = 'button--red' %}
+                                                            {% else %}
+                                                                {% set actionColor = 'button--blue' %}
+                                                            {% endif %}
+
+                                                            <a href="{{ actionUrl }}"
+                                                               style="{{ 'fontFamily'|emailStyle }} {{ 'button'|emailStyle }} {{ actionColor }}"
+                                                               class="button"
+                                                               target="_blank">
+                                                                {{ actionText }}
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            {% endif %}
+
+                                            {% block outroText %}{% endblock %}
+
+                                            <!-- Outro -->
+                                            {% if outroLines is defined and outroLines is not empty %}
+                                                {% for line in outroLines %}
+                                                    <p style="{{ 'paragraph'|emailStyle }}">
+                                                        {{ line }}
+                                                    </p>
+                                                {% endfor %}
+                                            {% endif %}
+
+                                            <!-- Sub Copy -->
+                                            {% if actionText is defined and actionText is not empty %}
+                                                <table style="{{ 'body_sub'|emailStyle }}">
+                                                    <tr>
+                                                        <td style="{{ 'fontFamily'|emailStyle }}">
+                                                            <p style="{{ 'paragraph-sub'|emailStyle }}">
+                                                                {{ 'strings.emails.auth.trouble_clicking_button'|trans({'%action_text%': actionText}) }}
+                                                            </p>
+
+                                                            <p style="{{ 'paragraph-sub'|emailStyle }}">
+                                                                <a style="{{ 'anchor'|emailStyle }}"
+                                                                   href="{{ actionUrl }}" target="_blank">
+                                                                    {{ actionUrl }}
+                                                                </a>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            {% endif %}
+
+                                        {% endblock %}
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                {% endblock %}
+
+                <!-- Footer -->
+                {% block footer %}
+                    {{ include('email/layout/footer.html.twig') }}
+                {% endblock %}
+            </table>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

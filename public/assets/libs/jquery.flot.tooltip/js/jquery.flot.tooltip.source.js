@@ -35,7 +35,7 @@
         }
     };
 
-    // dummy default options object for legacy code (<0.8.5) - is deleted later
+    // dummy default options object for legacy person (<0.8.5) - is deleted later
     defaultOptions.tooltipOpts = defaultOptions.tooltip;
 
     // object

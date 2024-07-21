@@ -109,14 +109,17 @@
 @import "extra-libs/formValidation";
 @import "extra-libs/bootbox";
 
-@import "templates/admin/dashboard-manager";
-@import "templates/admin/admin-todo-message-show";
 
 @import "dropzone/dist/dropzone.css";
 
 
 @import 'base/global';
 
+@import '../libs/jquery-steps/jquery.steps.css';
+
 //@import '@symfony/ux-dropzone/dist/style.min.css';
 
 @import "widgets/uppy";
+
+
+@import "memory";

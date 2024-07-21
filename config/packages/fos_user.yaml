@@ -1,12 +1,14 @@
-fos_user:
-    db_driver: orm
-    firewall_name: main
-    user_class: App\Entity\User
-    registration:
-        confirmation:
-            enabled: true
-    from_email:
-        address: '%app.notifications.email_sender%'
-        sender_name: '%app.notifications.email_sender_name%'
-    service:
-        mailer: 'App\Mailer\FOSUserMailer'
+#fos_user:
+#    db_driver: orm
+#    firewall_name: main
+#    user_class: App\Entity\User
+#    registration:
+#        confirmation:
+#            enabled: true
+#    from_email:
+#        address: '%app.notifications.email_sender%'
+#        sender_name: '%app.notifications.email_sender_name%'
+#    service:
+#        mailer: 'fos_user.mailer.noop'
+##    service:
+##        mailer: 'App\Mailer\FOSUserMailer'

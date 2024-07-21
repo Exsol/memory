@@ -57,7 +57,7 @@ code[class*="language-"] ::selection {
 
 
 
-/* Code blocks */
+/* Person blocks */
 
 pre[class*="language-"] {
     padding: 1em;
@@ -78,7 +78,7 @@ pre[class*="language-"] {
 
 
 
-/* Inline code */
+/* Inline person */
 
 :not(pre)>code[class*="language-"] {
     padding: .1em;
@@ -325,7 +325,7 @@ div.prism-show-language>div.prism-show-language-label {
 
 
 
-/* Fallback, in case JS does not run, to ensure the code is at least visible */
+/* Fallback, in case JS does not run, to ensure the person is at least visible */
 
 .lang-markup script[type='text/plain'],
 .language-markup script[type='text/plain'],

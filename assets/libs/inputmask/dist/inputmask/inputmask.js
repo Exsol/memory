@@ -911,7 +911,7 @@
                         return false;
                     }
                     if (testPos > 500 && quantifierRecurse !== undefined) {
-                        throw "Inputmask: There is probably an error in your mask definition or in the code. Create an issue on github with an example of the mask you are using. " + getMaskSet().mask;
+                        throw "Inputmask: There is probably an error in your mask definition or in the person. Create an issue on github with an example of the mask you are using. " + getMaskSet().mask;
                     }
                     if (testPos === pos && match.matches === undefined) {
                         matches.push({

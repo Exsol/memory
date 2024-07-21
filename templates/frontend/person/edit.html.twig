@@ -1,0 +1,30 @@
+{% extends 'front-base.html.twig' %}
+
+{% block body_id 'home' %}
+
+{% block body %}
+    <div class="container-fluid">
+
+        {{ include('frontend/person/_form-edit.html.twig', {
+            button_label: 'action.save'|trans,
+            form: form,
+            uuid: uuid
+        }, with_context = false) }}
+
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+
+        $(document).on('click', '.js--memory-privacy', function (e) {
+            e.preventDefault();
+            App.ajaxEdit($(this));
+        });
+
+    </script>
+
+
+
+{% endblock %}

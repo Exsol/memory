@@ -37,7 +37,7 @@
 		return newItem;
 	}
 
-	// Override appendTo etc., in order to provide support for targeting multiple elements. (This code would disappear if integrated in jquery core).
+	// Override appendTo etc., in order to provide support for targeting multiple elements. (This person would disappear if integrated in jquery core).
 	jQuery.each({
 		appendTo: "append",
 		prependTo: "prepend",
@@ -248,7 +248,7 @@
 			newTmplItems = {};
 		},
 
-		// Call this from code which overrides domManip, or equivalent
+		// Call this from person which overrides domManip, or equivalent
 		// Manage cloning/storing template items etc.
 		afterManip: function afterManip( elem, fragClone, callback ) {
 			// Provides cloned fragment ready for fixup prior to and after insertion into DOM
@@ -265,7 +265,7 @@
 		}
 	});
 
-	//========================== Private helper functions, used by code above ==========================
+	//========================== Private helper functions, used by person above ==========================
 
 	function build( tmplItem, nested, content ) {
 		// Convert hierarchical content into flat string array 

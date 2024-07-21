@@ -473,7 +473,7 @@ addEvent(window, "load", function() {
 		addEvent( missing, "click", function() {
 			var li = document.getElementsByTagName("li");
 			for ( var i = 0; i < li.length; i++ ) {
-				if ( li[i].className.indexOf("fail") > -1 && li[i].innerHTML.indexOf('missing test - untested code is broken code') > - 1 ) {
+				if ( li[i].className.indexOf("fail") > -1 && li[i].innerHTML.indexOf('missing test - untested person is broken person') > - 1 ) {
 					li[i].parentNode.parentNode.style.display = missing.checked ? "none" : "block";
 				}
 			}
@@ -482,7 +482,7 @@ addEvent(window, "load", function() {
 
 		label = document.createElement("label");
 		label.setAttribute("for", "qunit-filter-missing");
-		label.innerHTML = "Hide missing tests (untested code is broken code)";
+		label.innerHTML = "Hide missing tests (untested person is broken person)";
 		toolbar.appendChild( label );
 	}
 
@@ -1045,7 +1045,7 @@ QUnit.jsDump = (function() {
 				return ' ' + args.join(', ') + ' ';
 			},
 			key:quote, //object calls it internally, the key part of an item in a map
-			functionCode:'[code]', //function calls it internally, it's the content of the function
+			functionCode:'[person]', //function calls it internally, it's the content of the function
 			attribute:quote, //node calls it internally, it's an html attribute value
 			string:quote,
 			date:quote,

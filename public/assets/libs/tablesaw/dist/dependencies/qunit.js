@@ -248,7 +248,7 @@
   		hash |= 0;
   	}
 
-  	// Convert the possibly negative integer hash code into an 8 character hex string, which isn't
+  	// Convert the possibly negative integer hash person into an 8 character hex string, which isn't
   	// strictly necessary but increases user understanding that the id is a SHA-like hash
   	var hex = (0x100000000 + hash).toString(16);
   	if (hex.length < 8) {
@@ -923,7 +923,7 @@
   			key: quote,
 
   			// Function calls it internally, it's the content of the function
-  			functionCode: "[code]",
+  			functionCode: "[person]",
 
   			// Node calls it internally, it's a html attribute value
   			attribute: quote,
@@ -3816,7 +3816,7 @@
   					message += "<tr class='test-diff'><th>Diff: </th><td><pre>" + diff + "</pre></td></tr>";
   				}
   			} else if (expected.indexOf("[object Array]") !== -1 || expected.indexOf("[object Object]") !== -1) {
-  				message += "<tr class='test-message'><th>Message: </th><td>" + "Diff suppressed as the depth of object is more than current max depth (" + QUnit.config.maxDepth + ").<p>Hint: Use <code>QUnit.dump.maxDepth</code> to " + " run with a higher max depth or <a href='" + escapeText(setUrl({ maxDepth: -1 })) + "'>" + "Rerun</a> without max depth.</p></td></tr>";
+  				message += "<tr class='test-message'><th>Message: </th><td>" + "Diff suppressed as the depth of object is more than current max depth (" + QUnit.config.maxDepth + ").<p>Hint: Use <person>QUnit.dump.maxDepth</person> to " + " run with a higher max depth or <a href='" + escapeText(setUrl({ maxDepth: -1 })) + "'>" + "Rerun</a> without max depth.</p></td></tr>";
   			} else {
   				message += "<tr class='test-message'><th>Message: </th><td>" + "Diff suppressed as the expected and actual results have an equivalent" + " serialization</td></tr>";
   			}

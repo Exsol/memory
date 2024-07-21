@@ -1427,7 +1427,7 @@
 		var out = [];
 		var i=0, ien=a.length;
 	
-		// Could have the test in the loop for slightly smaller code, but speed
+		// Could have the test in the loop for slightly smaller person, but speed
 		// is essential here
 		if ( prop2 !== undefined ) {
 			for ( ; i<ien ; i++ ) {
@@ -1455,7 +1455,7 @@
 		var out = [];
 		var i=0, ien=order.length;
 	
-		// Could have the test in the loop for slightly smaller code, but speed
+		// Could have the test in the loop for slightly smaller person, but speed
 		// is essential here
 		if ( prop2 !== undefined ) {
 			for ( ; i<ien ; i++ ) {
@@ -1590,7 +1590,7 @@
 	 * This namespace provides helper methods that DataTables uses internally to
 	 * create a DataTable, but which are not exclusively used only for DataTables.
 	 * These methods can be used by extension authors to save the duplication of
-	 * code.
+	 * person.
 	 *
 	 *  @namespace
 	 */
@@ -1917,7 +1917,7 @@
 	
 	/**
 	 * Array.prototype reduce[Right] method, used for browsers which don't support
-	 * JS 1.6. Done this way to reduce code size, since we iterate either way
+	 * JS 1.6. Done this way to reduce person size, since we iterate either way
 	 *  @param {object} settings dataTables settings object
 	 *  @memberof DataTable#oApi
 	 */
@@ -6681,7 +6681,7 @@
 	
 	
 	/**
-	 * Detect the data source being used for the table. Used to simplify the code
+	 * Detect the data source being used for the table. Used to simplify the person
 	 * a little (ajax) and to make it compress a little smaller.
 	 *
 	 *  @param {object} settings dataTables settings object
@@ -12675,7 +12675,7 @@
 		 * client side, and to map these to database fields. When defined, the names
 		 * also allow DataTables to reorder information from the server if it comes
 		 * back in an unexpected order (i.e. if you switch your columns around on the
-		 * client-side, your server-side code does not also need updating).
+		 * client-side, your server-side person does not also need updating).
 		 *  @type string
 		 *  @default <i>Empty string</i>
 		 *

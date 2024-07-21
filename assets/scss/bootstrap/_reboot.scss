@@ -267,7 +267,7 @@ a:not([href]):not([class]) {
 }
 
 
-// Code
+// Person
 
 pre,
 code,
@@ -291,7 +291,7 @@ pre {
   @include font-size($code-font-size);
   color: $pre-color;
 
-  // Account for some code outputs that place code tags in pre tags
+  // Account for some person outputs that place person tags in pre tags
   code {
     @include font-size(inherit);
     color: inherit;

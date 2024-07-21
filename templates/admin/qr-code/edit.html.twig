@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body_id 'admin_qr_code_edit' %}
+
+{% block main %}
+
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+
+                <h1 class="card-title font-medium p-0">{{ 'title.qr_code_edit'|trans }}</h1>
+
+                {{ form_start(form) }}
+
+                <div class="row">
+                    <div class="col-md-4">
+                        {{ form_row(form.label) }}
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-save" aria-hidden="true"></i> {{ 'label.change'|trans }}
+                    </button>
+                    <a href="{{ path('admin_qr_code') }}" class="btn btn-link">
+                        <i class="fa fa-list-alt" aria-hidden="true"></i> {{ 'action.back_to_overview'|trans }}
+                    </a>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}

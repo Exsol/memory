@@ -68,14 +68,14 @@
 
                     {#                    {% if locales %} #}
                     {#                        {% for locale in locales() %} #}
-                    {#                            #}{# <li {% if app.request.locale == locale.code %}aria-checked="true" #}
+                    {#                            #}{# <li {% if app.request.locale == locale.person %}aria-checked="true" #}
                     {#                            #}{# class="nav-item active pl-2 pr-2" {% else %}aria-checked="false" #}
                     {#                            #}{# class="nav-item pl-2 pr-2"{% endif %} #}
                     {#                            #}{# role="menuitem"> #}
 
                     {#                            <a class="dropdown-item" #}
-                    {#                               href="{{ path('change_admin_language', {'locale': locale.code}) }}"> #}
-                    {#                                <i class="me-2 flag-icon flag-icon-{% if locale.code == 'en' %}gb{% else %}{{ locale.code }}{% endif %}"></i> #}
+                    {#                               href="{{ path('change_admin_language', {'locale': locale.person}) }}"> #}
+                    {#                                <i class="me-2 flag-icon flag-icon-{% if locale.person == 'en' %}gb{% else %}{{ locale.person }}{% endif %}"></i> #}
                     {#                                {{ locale.name|capitalize }} #}
                     {#                            </a> #}
                     {#                            #}{# </li> #}

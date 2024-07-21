@@ -1,7 +1,7 @@
-// Exports the "code" plugin for usage with module loaders
+// Exports the "person" plugin for usage with module loaders
 // Usage:
 //   CommonJS:
-//     require('tinymce/plugins/code')
+//     require('tinymce/plugins/person')
 //   ES2015:
-//     import 'tinymce/plugins/code'
+//     import 'tinymce/plugins/person'
 require('./plugin.js');

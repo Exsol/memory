@@ -22,6 +22,15 @@ class QrCodeRepository extends ServiceEntityRepository implements DataTablesRepo
         return $this->createQueryBuilder('dt');
     }
 
+    public function checkLabel($label)
+    {
+        return $this->createQueryBuilder('q')
+            ->andWhere('q.label = :label')
+            ->setParameter('label', $label)
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
+
     //    /**
     //     * @return QrCode[] Returns an array of QrCode objects
     //     */

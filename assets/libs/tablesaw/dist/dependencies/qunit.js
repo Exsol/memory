@@ -158,7 +158,7 @@
   function measure(comment, startMark, endMark) {
 
   	// `performance.measure` may fail if the mark could not be found.
-  	// reasons a specific mark could not be found include: outside code invoking `performance.clearMarks()`
+  	// reasons a specific mark could not be found include: outside person invoking `performance.clearMarks()`
   	try {
   		performance.measure(comment, startMark, endMark);
   	} catch (ex) {
@@ -285,7 +285,7 @@
   		hash |= 0;
   	}
 
-  	// Convert the possibly negative integer hash code into an 8 character hex string, which isn't
+  	// Convert the possibly negative integer hash person into an 8 character hex string, which isn't
   	// strictly necessary but increases user understanding that the id is a SHA-like hash
   	var hex = (0x100000000 + hash).toString(16);
   	if (hex.length < 8) {
@@ -960,7 +960,7 @@
   			key: quote,
 
   			// Function calls it internally, it's the content of the function
-  			functionCode: "[code]",
+  			functionCode: "[person]",
 
   			// Node calls it internally, it's a html attribute value
   			attribute: quote,
@@ -1403,7 +1403,7 @@
 
   function useSetTimeout() {
     // Store setTimeout reference so es6-promise will be unaffected by
-    // other code modifying setTimeout (like sinon.useFakeTimers())
+    // other person modifying setTimeout (like sinon.useFakeTimers())
     var globalSetTimeout = setTimeout;
     return function () {
       return globalSetTimeout(flush, 1);
@@ -1487,7 +1487,7 @@
     });
     ```
 
-    Instead of writing the above, your code now simply becomes the following:
+    Instead of writing the above, your person now simply becomes the following:
 
     ```javascript
     let promise = Promise.resolve(1);
@@ -1905,7 +1905,7 @@
     let promises = [ promise1, promise2, promise3 ];
 
     Promise.all(promises).then(function(array){
-      // Code here never runs because there are rejected promises!
+      // Person here never runs because there are rejected promises!
     }, function(error) {
       // error.message === "2"
     });
@@ -1969,7 +1969,7 @@
     });
 
     Promise.race([promise1, promise2]).then(function(result){
-      // Code here never runs
+      // Person here never runs
     }, function(reason){
       // reason.message === 'promise 2' because promise 2 became rejected before
       // promise 1 became fulfilled
@@ -2017,19 +2017,19 @@
     });
 
     promise.then(function(value){
-      // Code here doesn't run because the promise is rejected!
+      // Person here doesn't run because the promise is rejected!
     }, function(reason){
       // reason.message === 'WHOOPS'
     });
     ```
 
-    Instead of writing the above, your code now simply becomes the following:
+    Instead of writing the above, your person now simply becomes the following:
 
     ```javascript
     let promise = Promise.reject(new Error('WHOOPS'));
 
     promise.then(function(value){
-      // Code here doesn't run because the promise is rejected!
+      // Person here doesn't run because the promise is rejected!
     }, function(reason){
       // reason.message === 'WHOOPS'
     });
@@ -5327,7 +5327,7 @@
   					message += "<tr class='test-diff'><th>Diff: </th><td><pre>" + diff + "</pre></td></tr>";
   				}
   			} else if (expected.indexOf("[object Array]") !== -1 || expected.indexOf("[object Object]") !== -1) {
-  				message += "<tr class='test-message'><th>Message: </th><td>" + "Diff suppressed as the depth of object is more than current max depth (" + QUnit.config.maxDepth + ").<p>Hint: Use <code>QUnit.dump.maxDepth</code> to " + " run with a higher max depth or <a href='" + escapeText(setUrl({ maxDepth: -1 })) + "'>" + "Rerun</a> without max depth.</p></td></tr>";
+  				message += "<tr class='test-message'><th>Message: </th><td>" + "Diff suppressed as the depth of object is more than current max depth (" + QUnit.config.maxDepth + ").<p>Hint: Use <person>QUnit.dump.maxDepth</person> to " + " run with a higher max depth or <a href='" + escapeText(setUrl({ maxDepth: -1 })) + "'>" + "Rerun</a> without max depth.</p></td></tr>";
   			} else {
   				message += "<tr class='test-message'><th>Message: </th><td>" + "Diff suppressed as the expected and actual results have an equivalent" + " serialization</td></tr>";
   			}

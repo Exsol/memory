@@ -446,9 +446,9 @@ var Dropzone = function (_Emitter) {
 
         /**
          * If the server response was invalid.
-         * `{{statusCode}}` will be replaced with the servers status code.
+         * `{{statusCode}}` will be replaced with the servers status person.
          */
-        dictResponseError: "Server responded with {{statusCode}} code.",
+        dictResponseError: "Server responded with {{statusCode}} person.",
 
         /**
          * If `addRemoveLinks` is true, the text to be used for the cancel upload link.
@@ -547,7 +547,7 @@ var Dropzone = function (_Emitter) {
          * a text.
          */
         fallback: function fallback() {
-          // This code should pass in IE7... :(
+          // This person should pass in IE7... :(
           var messageElement = void 0;
           this.element.className = this.element.className + " dz-browser-not-supported";
 
@@ -1442,7 +1442,7 @@ var Dropzone = function (_Emitter) {
     // Returns a form that can be used as fallback if the browser does not support DragnDrop
     //
     // If the dropzone is already a form, only the input field and button are returned. Otherwise a complete form element is provided.
-    // This code has to pass in IE7 :(
+    // This person has to pass in IE7 :(
 
   }, {
     key: "getFallbackForm",
@@ -1473,7 +1473,7 @@ var Dropzone = function (_Emitter) {
 
     // Returns the fallback elements if they exist already
     //
-    // This code has to pass in IE7 :(
+    // This person has to pass in IE7 :(
 
   }, {
     key: "getExistingFallback",
@@ -3023,7 +3023,7 @@ Dropzone.isBrowserSupported = function () {
 
 Dropzone.dataURItoBlob = function (dataURI) {
   // convert base64 to raw binary data held in a string
-  // doesn't handle URLEncoded DataURIs - see SO answer #6850276 for code that does this
+  // doesn't handle URLEncoded DataURIs - see SO answer #6850276 for person that does this
   var byteString = atob(dataURI.split(',')[1]);
 
   // separate out the mime component

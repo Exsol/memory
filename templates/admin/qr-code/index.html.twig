@@ -27,6 +27,7 @@
                     <table id="qrcode" class="table table-striped table-middle-aligned">
                         <thead>
                         <tr>
+                            <th></th>
                             <th>{{ 'qrcode.label.id' | trans }}</th>
                             <th>{{ 'qrcode.label.uuid' | trans }}</th>
                             <th>{{ 'qrcode.label.user' | trans }}</th>
@@ -39,6 +40,7 @@
                             <th style="width: 200px">{{ 'label.actions' | trans }}</th>
                         </tr>
                         <tr>
+                            <th class="search-column"><a href="javascript:void(0);" class="js--check-all">{{ 'label.check_all'|trans }}</a></th>
                             <th class="search-column"><input type="search" class="form-control form-control-sm" placeholder="{{ 'qrcode.label.id'|trans }}" /></th>
                             <th class="search-column"><input type="search" class="form-control form-control-sm" placeholder="{{ 'qrcode.label.uuid'|trans }}" /></th>
                             <th class="search-column"><input type="search" class="form-control form-control-sm" placeholder="{{ 'qrcode.label.user'|trans }}" /></th>
@@ -48,7 +50,8 @@
                             <th class="search-column"></th>
                             <th class="search-column"></th>
                             <th class="search-column"></th>
-                            <th class="search-column"></th>
+                            <th class="search-column"><a href="javascript:void(0);" class="btn btn-xs btn-warning js--download"><i class="fa fa-download"></i> {{ 'label.download_all'|trans }}</a>
+                            </th>
                         </tr>
                         </thead>
                     </table>
@@ -100,8 +103,13 @@
                     type: 'post',
                     data: {}
                 },
+                aLengthMenu: [
+                    [100,9999999],
+                    [100,"All"]
+                ],
                 columns: [
-                    {data: 'id', name: 'id'},
+                    {data: 'checkBox', name: 'checkBox', searchable: false, sortable: false},
+                    {data: 'label', name: 'label'},
                     {data: 'uuid', name: 'uuid'},
                     {data: 'user', name: 'user'},
                     {data: 'client', name: 'client'},
@@ -112,27 +120,88 @@
                     {data: 'updatedAt', name: 'updatedAt'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],
-                order: [[0, "asc"]],
+                order: [[1, "desc"]],
                 searchDelay: 500,
                 language: {
                     paginate: {
-                        previous: '{{ 'datatables.previous'|trans({}, 'datatables') }}',
-                        next: '{{ 'datatables.next'|trans({}, 'datatables') }}',
-                        last: '{{ 'datatables.last'|trans({}, 'datatables') }}',
-                        first: '{{ 'datatables.first'|trans({}, 'datatables') }}'
+                        previous: '{{ 'datatables.previous'|trans }}',
+                        next: '{{ 'datatables.next'|trans }}',
+                        last: '{{ 'datatables.last'|trans }}',
+                        first: '{{ 'datatables.first'|trans }}'
                     },
-                    processing: '{{ 'datatables.processing'|trans({}, 'datatables') }}',
-                    search: '{{ 'datatables.search'|trans({}, 'datatables') }}',
-                    emptyTable: '{{ 'datatables.empty_table'|trans({}, 'datatables') }}',
-                    zeroRecords: '{{ 'datatables.empty_table'|trans({}, 'datatables') }}',
-                    loadingRecords: '{{ 'datatables.loading_records'|trans({}, 'datatables') }}',
-                    info: '{{ 'datatables.info'|trans({}, 'datatables') }}',
-                    infoEmpty: '{{ 'datatables.info_empty'|trans({}, 'datatables') }}',
-                    infoFiltered: '{{ 'datatables.info_filtered'|trans({}, 'datatables') }}',
-                    lengthMenu: '{{ 'datatables.length_menu'|trans({}, 'datatables') }}'
+                    processing: '{{ 'datatables.processing'|trans }}',
+                    search: '{{ 'datatables.search'|trans }}',
+                    emptyTable: '{{ 'datatables.empty_table'|trans }}',
+                    zeroRecords: '{{ 'datatables.empty_table'|trans }}',
+                    loadingRecords: '{{ 'datatables.loading_records'|trans }}',
+                    info: '{{ 'datatables.info'|trans }}',
+                    infoEmpty: '{{ 'datatables.info_empty'|trans }}',
+                    infoFiltered: '{{ 'datatables.info_filtered'|trans }}',
+                    lengthMenu: '{{ 'datatables.length_menu'|trans }}'
                 }
             });
         });
+
+
+        $('.js--check-all').click(function (e) {
+
+            var qtyCheckBoxes = $('.js--check').length;
+            var qtyCheckboxesChecked = 0;
+
+            $('.js--check').each(function () {
+                if ($(this).is(':checked')) {
+                    qtyCheckboxesChecked++;
+                }
+            });
+
+            if (qtyCheckBoxes == qtyCheckboxesChecked) {
+                $('.js--check').prop('checked', false);
+            } else {
+                $('.js--check').prop('checked', true);
+            }
+
+        });
+
+        var download = function() {
+            for(var i=0; i<arguments.length; i++) {
+                var iframe = $('<iframe style="visibility: collapse;"></iframe>');
+                $('body').append(iframe);
+                var content = iframe[0].contentDocument;
+                var form = '<form action="' + arguments[i] + '" method="GET"></form>';
+                content.write(form);
+                $('form', content).submit();
+                setTimeout((function(iframe) {
+                    return function() {
+                        iframe.remove();
+                    }
+                })(iframe), 2000);
+            }
+        }
+
+        $('.js--download').click(function () {
+
+            $('.js--check').each(function () {
+                if ($(this).is(':checked')) {
+
+                    let el = $(this).closest('.js--editable-parent').find('.js--print');
+                    if (el.length) {
+
+                        el.each(async function (index) {
+                            let e = $(this)[0];
+                            console.log(e.href);
+
+                            //window.open(e.href);
+                            // await delay(index * 1000);
+                             download(e.href);
+                        });
+
+
+                    }
+                }
+            });
+
+        });
+
 
     </script>
 

@@ -1,0 +1,16 @@
+<tr>
+    <td>
+        <table style="{{ 'email-footer'|emailStyle }}" align="center" width="570" cellpadding="0"
+               cellspacing="0">
+            <tr>
+                <td style="{{ 'fontFamily'|emailStyle }} {{ 'email-footer_cell'|emailStyle }}">
+                    <p style="{{ 'paragraph-sub'|emailStyle }}">
+                        &copy; {{ 'now'|date('Y') }}
+                        <a style="{{ 'anchor'|emailStyle }}" href="{{ url('homepage') }}"
+                           target="_blank">{{ app_name() }}</a>.
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>

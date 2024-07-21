@@ -240,8 +240,9 @@ label {
 .error-box {
 	height: 100%;
 	position: fixed;
-	background: url(../../../images/background/error-bg.jpg) no-repeat
-		bottom -250px center #fff;
+	//background: url(../../../images/background/error-bg.jpg) no-repeat
+	//	bottom -250px center #fff;
+	background: #fff;
 	width: 100%;
 	.error-body {
 		padding-top: 5%;

@@ -47,9 +47,9 @@
      * Definition of an abstract UI control
      *
      * Each concrete component must call this one.
-     * <code>
+     * <person>
      * k.o.call(this);
-     * </code>
+     * </person>
      */
     k.o = function () {
         var s = this;

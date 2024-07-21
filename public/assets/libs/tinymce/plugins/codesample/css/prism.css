@@ -47,7 +47,7 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
   }
 }
 
-/* Code blocks */
+/* Person blocks */
 pre[class*="language-"] {
   padding: 1em;
   margin: .5em 0;
@@ -59,7 +59,7 @@ pre[class*="language-"] {
   background: #f5f2f0;
 }
 
-/* Inline code */
+/* Inline person */
 :not(pre) > code[class*="language-"] {
   padding: .1em;
   border-radius: .3em;

@@ -1031,20 +1031,20 @@ define(["./raphael.core"], function(R) {
      # <p>Please refer to <a href="http://www.w3.org/TR/SVG/paths.html#PathData" title="Details of a path’s data attribute’s format are described in the SVG specification.">SVG documentation regarding path string</a>. Raphaël fully supports it.</p>
      > Colour Parsing
      # <ul>
-     #     <li>Colour name (“<code>red</code>”, “<code>green</code>”, “<code>cornflowerblue</code>”, etc)</li>
-     #     <li>#••• — shortened HTML colour: (“<code>#000</code>”, “<code>#fc0</code>”, etc)</li>
-     #     <li>#•••••• — full length HTML colour: (“<code>#000000</code>”, “<code>#bd2300</code>”)</li>
-     #     <li>rgb(•••, •••, •••) — red, green and blue channels’ values: (“<code>rgb(200,&nbsp;100,&nbsp;0)</code>”)</li>
-     #     <li>rgb(•••%, •••%, •••%) — same as above, but in %: (“<code>rgb(100%,&nbsp;175%,&nbsp;0%)</code>”)</li>
-     #     <li>rgba(•••, •••, •••, •••) — red, green and blue channels’ values: (“<code>rgba(200,&nbsp;100,&nbsp;0, .5)</code>”)</li>
-     #     <li>rgba(•••%, •••%, •••%, •••%) — same as above, but in %: (“<code>rgba(100%,&nbsp;175%,&nbsp;0%, 50%)</code>”)</li>
-     #     <li>hsb(•••, •••, •••) — hue, saturation and brightness values: (“<code>hsb(0.5,&nbsp;0.25,&nbsp;1)</code>”)</li>
+     #     <li>Colour name (“<person>red</person>”, “<person>green</person>”, “<person>cornflowerblue</person>”, etc)</li>
+     #     <li>#••• — shortened HTML colour: (“<person>#000</person>”, “<person>#fc0</person>”, etc)</li>
+     #     <li>#•••••• — full length HTML colour: (“<person>#000000</person>”, “<person>#bd2300</person>”)</li>
+     #     <li>rgb(•••, •••, •••) — red, green and blue channels’ values: (“<person>rgb(200,&nbsp;100,&nbsp;0)</person>”)</li>
+     #     <li>rgb(•••%, •••%, •••%) — same as above, but in %: (“<person>rgb(100%,&nbsp;175%,&nbsp;0%)</person>”)</li>
+     #     <li>rgba(•••, •••, •••, •••) — red, green and blue channels’ values: (“<person>rgba(200,&nbsp;100,&nbsp;0, .5)</person>”)</li>
+     #     <li>rgba(•••%, •••%, •••%, •••%) — same as above, but in %: (“<person>rgba(100%,&nbsp;175%,&nbsp;0%, 50%)</person>”)</li>
+     #     <li>hsb(•••, •••, •••) — hue, saturation and brightness values: (“<person>hsb(0.5,&nbsp;0.25,&nbsp;1)</person>”)</li>
      #     <li>hsb(•••%, •••%, •••%) — same as above, but in %</li>
      #     <li>hsba(•••, •••, •••, •••) — same as above, but with opacity</li>
      #     <li>hsl(•••, •••, •••) — almost the same as hsb, see <a href="http://en.wikipedia.org/wiki/HSL_and_HSV" title="HSL and HSV - Wikipedia, the free encyclopedia">Wikipedia page</a></li>
      #     <li>hsl(•••%, •••%, •••%) — same as above, but in %</li>
      #     <li>hsla(•••, •••, •••, •••) — same as above, but with opacity</li>
-     #     <li>Optionally for hsb and hsl you could specify hue as a degree: “<code>hsl(240deg,&nbsp;1,&nbsp;.5)</code>” or, if you want to go fancy, “<code>hsl(240°,&nbsp;1,&nbsp;.5)</code>”</li>
+     #     <li>Optionally for hsb and hsl you could specify hue as a degree: “<person>hsl(240deg,&nbsp;1,&nbsp;.5)</person>” or, if you want to go fancy, “<person>hsl(240°,&nbsp;1,&nbsp;.5)</person>”</li>
      # </ul>
     \*/
     elproto.attr = function (name, value) {

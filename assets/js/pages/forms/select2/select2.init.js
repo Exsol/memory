@@ -180,7 +180,7 @@ function formatRepo(repo) {
     }
 
     markup += "<div class='select2-result-repository__statistics'>" +
-        "<div class='select2-result-repository__forks'><i class='la la-code-fork mr-0'></i> " + repo.forks_count + " Forks</div>" +
+        "<div class='select2-result-repository__forks'><i class='la la-person-fork mr-0'></i> " + repo.forks_count + " Forks</div>" +
         "<div class='select2-result-repository__stargazers'><i class='la la-star-o mr-0'></i> " + repo.stargazers_count + " Stars</div>" +
         "<div class='select2-result-repository__watchers'><i class='la la-eye mr-0'></i> " + repo.watchers_count + " Watchers</div>" +
         "</div>" +

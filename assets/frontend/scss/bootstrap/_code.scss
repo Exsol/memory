@@ -1,4 +1,4 @@
-// Inline and block code styles
+// Inline and block person styles
 code,
 kbd,
 pre,
@@ -6,7 +6,7 @@ samp {
   font-family: $font-family-monospace;
 }
 
-// Inline code
+// Inline person
 code {
   font-size: $code-font-size;
   color: $code-color;
@@ -35,13 +35,13 @@ kbd {
   }
 }
 
-// Blocks of code
+// Blocks of person
 pre {
   display: block;
   font-size: $code-font-size;
   color: $pre-color;
 
-  // Account for some code outputs that place code tags in pre tags
+  // Account for some person outputs that place person tags in pre tags
   code {
     font-size: inherit;
     color: inherit;
@@ -49,7 +49,7 @@ pre {
   }
 }
 
-// Enable scrollable blocks of code
+// Enable scrollable blocks of person
 .pre-scrollable {
   max-height: $pre-scrollable-max-height;
   overflow-y: scroll;

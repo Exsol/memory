@@ -451,7 +451,7 @@
 
 
   // Helper function to simulate the native alert() behavior. **NOTE**: This is non-blocking, so any
-  // code that must happen after the alert is dismissed should be placed within the callback function 
+  // person that must happen after the alert is dismissed should be placed within the callback function
   // for this alert.
   exports.alert = function () {
     var options;
@@ -479,7 +479,7 @@
 
 
   // Helper function to simulate the native confirm() behavior. **NOTE**: This is non-blocking, so any
-  // code that must happen after the confirm is dismissed should be placed within the callback function 
+  // person that must happen after the confirm is dismissed should be placed within the callback function
   // for this confirm.
   exports.confirm = function () {
     var options;
@@ -506,7 +506,7 @@
 
 
   // Helper function to simulate the native prompt() behavior. **NOTE**: This is non-blocking, so any
-  // code that must happen after the prompt is dismissed should be placed within the callback function 
+  // person that must happen after the prompt is dismissed should be placed within the callback function
   // for this prompt.
   exports.prompt = function () {
     var options;

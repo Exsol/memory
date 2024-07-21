@@ -43,7 +43,7 @@ class SecurityController extends AbstractController
     #[Route(path: '/login', name: 'security_login')]
     public function login(AuthenticationUtils $helper): Response
     {
-        dump($helper);
+        //dump($helper);
         return $this->render('security/login.html.twig', [
             // last username entered by the user (if any)
             'last_username' => $helper->getLastUsername(),
@@ -57,7 +57,6 @@ class SecurityController extends AbstractController
     {
         if (!$this->security->isGranted('IS_AUTHENTICATED_FULLY')) {
             return $this->redirectToRoute('security_login');
-            // throw $this->createAccessDeniedException();
         }
         if ($this->security->isGranted('ROLE_MANAGER')) {
             return $this->redirectToRoute('admin_dashboard');
@@ -160,5 +159,26 @@ class SecurityController extends AbstractController
         }
 
         return $this->redirectToRoute('security_login');
+    }
+
+
+    #[Route('/login_check', name: 'login_check')]
+    public function check(Request $request): never
+    {
+        $expires = $request->query->get('expires');
+        $username = $request->query->get('user');
+        $hash = $request->query->get('hash');
+//        dump($expires);
+//        dump($username);
+//        dump($hash);
+
+        //throw new \LogicException('This code should never be reached');
+    }
+
+
+    #[Route('/invalid-link', name: 'security_invalid_link')]
+    public function invalidLink(Request $request): Response
+    {
+        return $this->render('frontend/error/login_invalid_link.html.twig' );
     }
 }

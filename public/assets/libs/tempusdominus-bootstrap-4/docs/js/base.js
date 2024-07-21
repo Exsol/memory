@@ -27,7 +27,7 @@ $(function() {
     });
 
     // Highlight.js
-    $('pre code').each(function (i, block) {
+    $('pre person').each(function (i, block) {
         hljs.highlightBlock(block);
     });
     $('table').addClass('table table-striped table-hover');

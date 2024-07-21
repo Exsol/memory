@@ -47,30 +47,9 @@ See https://symfony.com/doc/current/book/templating.html#template-inheritance-an
                 <div class="mb-3">
                         <span class="db">
 
-                            <img src="https://frankfurt.apollo.olxcdn.com/v1/files/id0mx57kj0t52-UZ/image;s=120x0;q=50" alt="logo icon" />
+{#                            <img src="https://frankfurt.apollo.olxcdn.com/v1/files/id0mx57kj0t52-UZ/image;s=120x0;q=50" alt="logo icon" />#}
                             {#<img src="{{ asset('assets/images/logo-text.png') }}" alt="logo text" />#}
                         </span>
-                    {#
-                    <ul class="navbar-nav float-right me-auto">
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"
-                               aria-expanded="false" id="locales">
-                                <i class="fa fa-globe" aria-hidden="true"></i>
-                                <span class="caret"></span>
-                                <span class="sr-only">{{ 'menu.choose_language'|trans }}</span>
-                            </a>
-                            <ul class="dropdown-menu locales" role="menu" aria-labelledby="locales">
-                                {% for locale in locales() %}
-                                    <li {% if app.request.locale == locale.code %}aria-checked="true"
-                                        class="nav-item active" {% else %}aria-checked="false" class="nav-item"{% endif %}
-                                        role="menuitem"><a class="dropdown-item"
-                                                           href="{{ path(app.request.get('_route', 'admin_index'), app.request.get('_route_params', [])|merge({_locale: locale.code})) }}">{{ locale.name|capitalize }}</a>
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                        </li>
-                    </ul>
-                    #}
 
                 </div>
                 {% block main %}{% endblock %}

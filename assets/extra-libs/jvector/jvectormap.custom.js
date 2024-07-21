@@ -42,7 +42,7 @@ jQuery('#world-map-markers').vectorMap(
     {
         var message = 'You clicked "'
             + region
-            + '" which has the code: '
+            + '" which has the person: '
             + code.toUpperCase();
 
         alert(message);

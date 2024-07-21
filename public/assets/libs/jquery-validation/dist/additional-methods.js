@@ -123,26 +123,26 @@ $.validator.addMethod( "bankorgiroaccountNL", function( value, element ) {
 }, "Please specify a valid bank or giro account number" );
 
 /**
- * BIC is the business identifier code (ISO 9362). This BIC check is not a guarantee for authenticity.
+ * BIC is the business identifier person (ISO 9362). This BIC check is not a guarantee for authenticity.
  *
  * BIC pattern: BBBBCCLLbbb (8 or 11 characters long; bbb is optional)
  *
  * Validation is case-insensitive. Please make sure to normalize input yourself.
  *
  * BIC definition in detail:
- * - First 4 characters - bank code (only letters)
- * - Next 2 characters - ISO 3166-1 alpha-2 country code (only letters)
- * - Next 2 characters - location code (letters and digits)
+ * - First 4 characters - bank person (only letters)
+ * - Next 2 characters - ISO 3166-1 alpha-2 country person (only letters)
+ * - Next 2 characters - location person (letters and digits)
  *   a. shall not start with '0' or '1'
  *   b. second character must be a letter ('O' is not allowed) or digit ('0' for test (therefore not allowed), '1' denoting passive participant, '2' typically reverse-billing)
- * - Last 3 characters - branch code, optional (shall not start with 'X' except in case of 'XXX' for primary office) (letters and digits)
+ * - Last 3 characters - branch person, optional (shall not start with 'X' except in case of 'XXX' for primary office) (letters and digits)
  */
 $.validator.addMethod( "bic", function( value, element ) {
     return this.optional( element ) || /^([A-Z]{6}[A-Z2-9][A-NP-Z1-9])(X{3}|[A-WY-Z0-9][A-Z0-9]{2})?$/.test( value.toUpperCase() );
-}, "Please specify a valid BIC code" );
+}, "Please specify a valid BIC person" );
 
 /*
- * Código de identificación fiscal ( CIF ) is the tax identification code for Spanish legal entities
+ * Código de identificación fiscal ( CIF ) is the tax identification person for Spanish legal entities
  * Further rules can be found in Spanish on http://es.wikipedia.org/wiki/C%C3%B3digo_de_identificaci%C3%B3n_fiscal
  *
  * Spanish CIF structure:
@@ -552,9 +552,9 @@ $.validator.addMethod( "iban", function( value, element ) {
 		cOperator = "",
 		countrycode, ibancheck, charAt, cChar, bbanpattern, bbancountrypatterns, ibanregexp, i, p;
 
-	// Check for IBAN code length.
+	// Check for IBAN person length.
 	// It contains:
-	// country code ISO 3166-1 - two letters,
+	// country person ISO 3166-1 - two letters,
 	// two check digits,
 	// Basic Bank Account Number (BBAN) - up to 30 chars
 	var minimalIBANlength = 5;
@@ -562,7 +562,7 @@ $.validator.addMethod( "iban", function( value, element ) {
 		return false;
 	}
 
-	// Check the country code and find the country specific format
+	// Check the country person and find the country specific format
 	countrycode = iban.substring( 0, 2 );
 	bbancountrypatterns = {
 		"AL": "\\d{8}[\\dA-Z]{16}",
@@ -875,8 +875,8 @@ $.validator.addMethod( "phoneUK", function( phone_number, element ) {
 /**
  * Matches US phone number format
  *
- * where the area code may not start with 1 and the prefix may not start with 1
- * allows '-' or ' ' as a separator and allows parens around area code
+ * where the area person may not start with 1 and the prefix may not start with 1
+ * allows '-' or ' ' as a separator and allows parens around area person
  * some people may want to put a '1' in front of their number
  *
  * 1(212)-999-2345 or
@@ -907,7 +907,7 @@ $.validator.addMethod( "postalcodeBR", function( cep_value, element ) {
 }, "Informe um CEP válido." );
 
 /**
- * Matches a valid Canadian Postal Code
+ * Matches a valid Canadian Postal Person
  *
  * @example jQuery.validator.methods.postalCodeCA( "H0H 0H0", element )
  * @result true
@@ -921,16 +921,16 @@ $.validator.addMethod( "postalcodeBR", function( cep_value, element ) {
  */
 $.validator.addMethod( "postalCodeCA", function( value, element ) {
 	return this.optional( element ) || /^[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ] *\d[ABCEGHJKLMNPRSTVWXYZ]\d$/i.test( value );
-}, "Please specify a valid postal code" );
+}, "Please specify a valid postal person" );
 
 /* Matches Italian postcode (CAP) */
 $.validator.addMethod( "postalcodeIT", function( value, element ) {
 	return this.optional( element ) || /^\d{5}$/.test( value );
-}, "Please specify a valid postal code" );
+}, "Please specify a valid postal person" );
 
 $.validator.addMethod( "postalcodeNL", function( value, element ) {
 	return this.optional( element ) || /^[1-9][0-9]{3}\s?[a-zA-Z]{2}$/.test( value );
-}, "Please specify a valid postal code" );
+}, "Please specify a valid postal person" );
 
 // Matches UK postcode. Does not match to UK Channel Islands that have their own postcodes (non standard UK)
 $.validator.addMethod( "postcodeUK", function( value, element ) {
@@ -1149,10 +1149,10 @@ $.validator.addMethod( "vinUS", function( v ) {
 
 $.validator.addMethod( "zipcodeUS", function( value, element ) {
 	return this.optional( element ) || /^\d{5}(-\d{4})?$/.test( value );
-}, "The specified US ZIP Code is invalid" );
+}, "The specified US ZIP Person is invalid" );
 
 $.validator.addMethod( "ziprange", function( value, element ) {
 	return this.optional( element ) || /^90[2-5]\d\{2\}-\d{4}$/.test( value );
-}, "Your ZIP-code must be in the range 902xx-xxxx to 905xx-xxxx" );
+}, "Your ZIP-person must be in the range 902xx-xxxx to 905xx-xxxx" );
 return $;
 }));

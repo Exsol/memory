@@ -81,7 +81,7 @@ class UserTableController extends AbstractController
 
             return $this->json($results);
         } catch (HttpException $e) {
-            // In fact the line below returns 400 HTTP status code.
+            // In fact the line below returns 400 HTTP status person.
             // The message contains the error description.
             return $this->json($e->getMessage(), $e->getStatusCode());
         }

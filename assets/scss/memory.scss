@@ -1,0 +1,1078 @@
+//bg-option-1
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+#bg-option-1 .gredient-info-bg3 {
+  background-image: url('../images/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#bg-option-1 .gredient-info-bg2 {
+  background: linear-gradient(148deg, #7c5e61 0%, rgba(255, 255, 255, 0) 50%);
+}
+
+#bg-option-1 .memory {
+  background: linear-gradient(148deg, #686868 0%, rgba(255, 255, 255, 0) 50%);
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  text-shadow: 3px 3px 3px #737373;
+
+  .actions {
+    margin-top: 20px;
+  }
+
+  .memory-nav {
+    margin-bottom: 10px;
+  }
+
+  .memory--full-name {
+    border-bottom: solid 5px #fff;
+    text-shadow: 3px 3px 3px #737373;
+    padding-bottom: 5px;
+  }
+
+  .memory--live {
+    text-align: right;
+    font-style: italic;
+    text-shadow: 3px 3px 3px #737373;
+  }
+
+  .memory--epitaph {
+    margin-top: auto;
+    font-style: italic;
+    text-shadow: 3px 3px 3px #737373;
+  }
+
+  .memory--photo {
+    max-width: 100%;
+    border-radius: 5px;
+    -webkit-box-shadow: 10px 15px 24px #525968;
+    -moz-box-shadow: 10px 15px 24px #525968;
+    box-shadow: 10px 15px 24px #525968;
+  }
+
+  .memory--photoArhive-photo {
+    max-width: 350px;
+    margin: 10px auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 10px 15px 24px #525968;
+    -moz-box-shadow: 10px 15px 24px #525968;
+    box-shadow: 10px 15px 24px #525968;
+  }
+
+  .memory--biography {
+    text-shadow: none;
+  }
+
+  .memory--words {
+    text-shadow: none;
+    font-style: italic;
+  }
+
+  .memory--burialPlace-map {
+    height: 600px;
+  }
+
+  .memory--burialPlace {
+    text-shadow: none;
+  }
+
+  .memory--burialPlace-adress {
+    font-style: italic;
+  }
+
+  .font-bold {
+    font-weight: bold;
+  }
+
+}
+
+
+//bg-option-2
+
+@font-face {
+  font-family: 'bookmancregular';
+  src: url('fonts/bookmanclight-webfont.woff2') format('woff2'),
+  url('fonts/bookmanclight-webfont.woff') format('woff'),
+  url('fonts/bookmanclight-webfont.ttf') format('truetype'),
+  url('fonts/bookmanclight-webfont.svg#bookmancregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: '1isadora_m_boldregular';
+  src: url('fonts/ofont.ru_1isadora_m_bold-webfont.woff2') format('woff2'),
+  url('fonts/ofont.ru_1isadora_m_bold-webfont.woff') format('woff'),
+  url('fonts/ofont.ru_1isadora_m_bold-webfont.ttf') format('truetype'),
+  url('fonts/ofont.ru_1isadora_m_bold-webfont.svg#1isadora_m_boldregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#bg-option-2 .gredient-info-bg3 {
+  background-color: #222a34 !important;
+  border: none !important;
+}
+
+#bg-option-2 .gredient-info-bg2 {
+  //background: linear-gradient(148deg, #7c5e61 0%, rgba(255, 255, 255, 0) 50%);
+}
+body#bg-option-2{
+  background: #131d26;
+  color: #fff;
+}
+body#bg-option-2 #main-wrapper{
+  background: #131d26;
+}
+
+#bg-option-2 .memory {
+  background: #131d26;
+  font-family: "bookmancregular", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+
+
+  &--first-name {
+    font-family: "1isadora_m_boldregular", serif;
+    color: #f7cca2;
+  }
+
+  &--last-name {
+    font-family: "1isadora_m_boldregular", serif;
+    text-transform: initial !important;
+    color: #f7cca2 !important;
+  }
+
+  &--patronymic {
+    font-family: "1isadora_m_boldregular", serif;
+    color: #f7cca2;
+  }
+
+  .actions {
+    margin-top: 20px;
+  }
+
+  &--full-name {
+    border: none !important;
+    border-bottom: solid 5px #fff !important;
+    padding-bottom: 5px;
+  }
+
+  &--live {
+    text-align: right;
+    color: #f7cca2 !important;
+    font-family: "bookmancregular", serif;
+    margin-top: 5px;
+  }
+  .col-md-9{
+    border: none !important;
+  }
+  .mapboxgl-marker{
+    border:  none !important;
+  }
+
+
+
+  .btn-dark {
+    color: #f7cca2;
+    font-family: "bookmancregular", serif;
+    background-color: #222a34;
+    border-color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+
+  &--epitaph {
+    margin-top: auto;
+    font-family: "1isadora_m_boldregular", serif;
+
+  }
+
+  .memory-nav {
+    margin-bottom: 10px;
+  }
+
+  &--photo {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  &--photoArhive-photo {
+    max-width: 350px;
+    margin: 10px auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 10px 15px 24px #525968;
+    -moz-box-shadow: 10px 15px 24px #525968;
+    box-shadow: 10px 15px 24px #525968;
+  }
+
+  .bg-secondary {
+    background-color: #222a34 !important;
+    border: solid 1px #222a34;
+    border-radius: initial !important;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+    font-family: "bookmancregular", serif;
+
+    h4 {
+      font-weight: 300;
+    }
+  }
+
+  &--biography {
+    text-shadow: none;
+    text-align: center;
+  }
+
+  &--words {
+    text-shadow: none;
+    font-family: "1isadora_m_boldregular", serif;
+  }
+
+  &--burialPlace-map {
+    height: 600px;
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+  }
+
+  &--burialPlace {
+    text-shadow: none;
+    border-bottom: none !important;
+  }
+
+
+
+  &--burialPlace-adress {
+    font-style: italic;
+  }
+
+  .card {
+    background: #131d26;
+    color: #fff;
+    @media (min-width: 1000px) {
+      border-right: solid 2px #f5caa1;
+      border-left: solid 2px #f5caa1;
+      border-bottom: solid 2px #f5caa1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .card div:nth-child(2) {
+      border: solid 2px #f5caa1;
+      border-top: none;
+    }
+    #burialPlace .container {
+      border-right: solid 2px #f5caa1;
+      border-left: solid 2px #f5caa1;
+      border-bottom: solid 2px #f5caa1;
+    }
+  }
+
+  .font-bold {
+    font-weight: bold;
+  }
+  .blockquote-footer{
+    color: #fff;
+  }
+
+}
+
+
+//bg-option-3
+
+$bg-option-3-color1: #32432b;
+$bg-option-3-color2: #7b8154;
+$bg-option-3-color3: #fff;
+
+$bg-option-3-font1: 'pragmaticalightcbold';
+$bg-option-3-font2: 'aGroticRoughBold';
+
+@font-face {
+  font-family: 'pragmaticalightcbold';
+  src: url('fonts/pragmaticalightc_bold-webfont.woff2') format('woff2'),
+  url('fonts/pragmaticalightc_bold-webfont.woff') format('woff'),
+  url('fonts/pragmaticalightc_bold-webfont.ttf') format('truetype'),
+  url('fonts/pragmaticalightc_bold-webfont.svg#pragmaticalightcbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'aGroticRoughBold';
+  src: url('fonts/a_GroticRough_Bold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#bg-option-3 .gredient-info-bg3 {
+  background-color: $bg-option-3-color1 !important;
+  border: none !important;
+}
+
+#bg-option-3 .gredient-info-bg2 {
+  //background: linear-gradient(148deg, #7c5e61 0%, rgba(255, 255, 255, 0) 50%);
+}
+body#bg-option-3{
+  background: $bg-option-3-color2;
+  color: #fff;
+}
+body#bg-option-3 #main-wrapper{
+  background: $bg-option-3-color2;
+}
+
+#bg-option-3 .memory {
+  background: $bg-option-3-color2;
+  font-family: $bg-option-3-font1;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+
+
+  &--first-name {
+    font-family: $bg-option-3-font1;
+    color: $bg-option-3-color3;
+  }
+
+  &--last-name {
+    font-family: $bg-option-3-font1;
+    text-transform: initial !important;
+    color: $bg-option-3-color3 !important;
+  }
+
+  &--patronymic {
+    font-family: $bg-option-3-font1;
+    color: $bg-option-3-color3;
+  }
+
+  .actions {
+    margin-top: 20px;
+  }
+
+  &--full-name {
+    border: none !important;
+    border-bottom: solid 5px #fff !important;
+    padding-bottom: 5px;
+  }
+
+  &--live {
+    text-align: right;
+    color: $bg-option-3-color3 !important;
+    font-family: "bookmancregular", serif;
+    margin-top: 5px;
+  }
+  .col-md-9{
+    border: none !important;
+  }
+  .mapboxgl-marker{
+    border:  none !important;
+  }
+
+
+
+  .btn-dark {
+    color: $bg-option-3-color3;
+    font-family: $bg-option-3-font2;
+    background-color: $bg-option-3-color1;
+    border-color: $bg-option-3-color3;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+
+  &--epitaph {
+    margin-top: auto;
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+  }
+
+  .memory-nav {
+    margin-bottom: 10px;
+  }
+
+  &--photo {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  &--photoArhive-photo {
+    max-width: 350px;
+    margin: 10px auto;
+    border-radius: 5px;
+  }
+
+  .bg-secondary {
+    background-color: $bg-option-3-color1 !important;
+    border: solid 1px $bg-option-3-color1;
+    border-radius: initial !important;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+    font-family: $bg-option-3-font2;
+
+    h4 {
+      font-weight: 300;
+    }
+  }
+
+  &--biography {
+    text-shadow: none;
+    text-align: center;
+  }
+
+  &--words {
+    text-shadow: none;
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+  }
+
+  &--burialPlace-map {
+    height: 600px;
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+  }
+
+  &--burialPlace {
+    text-shadow: none;
+    border-bottom: none !important;
+  }
+
+
+
+  &--burialPlace-adress {
+    font-style: italic;
+  }
+
+  .card {
+    background: $bg-option-3-color2;
+    color: #fff;
+    @media (min-width: 1000px) {
+      border-right: solid 2px $bg-option-3-color3;
+      border-left: solid 2px $bg-option-3-color3;
+      border-bottom: solid 2px $bg-option-3-color3;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .card div:nth-child(2) {
+      border: solid 2px $bg-option-3-color3;
+      border-top: none;
+    }
+    #burialPlace .container {
+      border-right: solid 2px $bg-option-3-color3;
+      border-left: solid 2px $bg-option-3-color3;
+      border-bottom: solid 2px $bg-option-3-color3;
+    }
+  }
+
+  .font-bold {
+    font-weight: bold;
+  }
+  .blockquote-footer{
+    color: #fff;
+  }
+
+}
+//bg-option-5
+$bg-option-5-color2: #f0f0e9;
+$bg-option-5-color1: #9d9d9e;
+$bg-option-5-color3: #fafaf7;
+
+$bg-option-5-font2: 'Circe';
+$bg-option-5-font1: 'Circe';
+
+@font-face {
+  font-family: 'Circe';
+  src: local('Circe Regular'), local('Circe-Regular'),
+  url('fonts/Circe-Regular.woff2') format('woff2'),
+  url('fonts/Circe-Regular.woff') format('woff'),
+  url('fonts/Circe-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+#bg-option-5 .gredient-info-bg3 {
+  background-color: $bg-option-5-color1 !important;
+  border: none !important;
+}
+
+#bg-option-5 .gredient-info-bg2 {
+  //background: linear-gradient(148deg, #7c5e61 0%, rgba(255, 255, 255, 0) 50%);
+}
+body#bg-option-5{
+  background: $bg-option-5-color2;
+  color: $bg-option-5-color3;
+}
+body#bg-option-5 #main-wrapper{
+  background: $bg-option-5-color2;
+}
+
+#bg-option-5 .memory {
+  background: $bg-option-5-color2;
+  font-family: $bg-option-5-font1;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+
+
+  &--first-name {
+    font-family: $bg-option-5-font1;
+    text-transform: uppercase;
+    color: $bg-option-5-color3;
+  }
+
+  &--last-name {
+    font-family: $bg-option-5-font1;
+    color: $bg-option-5-color3 !important;
+  }
+
+  &--patronymic {
+    font-family: $bg-option-5-font1;
+    text-transform: uppercase;
+    color: $bg-option-5-color3;
+  }
+
+  .actions {
+    margin-top: 20px;
+  }
+
+  &--full-name {
+    border: none !important;
+    border-bottom: solid 5px $bg-option-5-color2 !important;
+    padding-bottom: 5px;
+  }
+
+  &--live {
+    text-align: right;
+    color: $bg-option-5-color3 !important;
+    font-family: $bg-option-5-font2, serif;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  .col-md-9{
+    border: none !important;
+  }
+  .mapboxgl-marker{
+    border:  none !important;
+  }
+
+
+
+  .btn-dark {
+    color: $bg-option-5-color3;
+    font-family: $bg-option-5-font2;
+    background-color: $bg-option-5-color1;
+    border-color: $bg-option-5-color3;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &--epitaph {
+    margin-top: auto;
+    font-family: $bg-option-5-font2;
+  }
+
+  .text-white{
+    color: $bg-option-5-color3 !important;
+  }
+
+  .memory-nav {
+    margin-bottom: 10px;
+  }
+
+  &--photo {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  &--photoArhive-photo {
+    max-width: 350px;
+    margin: 10px auto;
+    border-radius: 5px;
+  }
+
+  .bg-secondary {
+    background-color: $bg-option-5-color1 !important;
+    border: solid 1px $bg-option-5-color1;
+    border-radius: initial !important;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+    font-family: $bg-option-5-font1;
+
+    h4 {
+      font-weight: 300;
+    }
+  }
+
+  &--biography {
+    text-shadow: none;
+    text-align: center;
+  }
+
+  &--words {
+    text-shadow: none;
+    font-family: $bg-option-5-font2;
+    font-style: italic;
+  }
+
+  &--burialPlace-map {
+    height: 600px;
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+  }
+
+  &--burialPlace {
+    text-shadow: none;
+    border-bottom: none !important;
+  }
+
+
+
+  &--burialPlace-adress {
+    font-style: italic;
+  }
+
+  .card {
+    background: $bg-option-5-color2;
+    color: $bg-option-5-color1;
+    @media (min-width: 1000px) {
+      border-right: solid 2px $bg-option-5-color1;
+      border-left: solid 2px $bg-option-5-color1;
+      border-bottom: solid 2px $bg-option-5-color1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .card div:nth-child(2) {
+      border: solid 2px $bg-option-5-color1;
+      border-top: none;
+    }
+    #burialPlace .container {
+      border-right: solid 2px $bg-option-5-color1;
+      border-left: solid 2px $bg-option-5-color1;
+      border-bottom: solid 2px $bg-option-5-color1;
+    }
+  }
+
+  .font-bold {
+    font-weight: bold;
+  }
+  .blockquote-footer{
+    color: $bg-option-5-color1;
+  }
+
+}
+
+//bg-option-7
+$bg-option-7-color1: #e4f2f9;
+$bg-option-7-color2: #a4bdc7;
+$bg-option-7-color3: #2f4458;
+
+$bg-option-7-font2: 'adventureregular';
+$bg-option-7-font1: 'officetypesansregular';
+
+@font-face {
+  font-family: 'adventureregular';
+  src: url('fonts/adventure-webfont.woff2') format('woff2'),
+  url('fonts/adventure-webfont.woff') format('woff'),
+  url('fonts/adventure-webfont.ttf') format('truetype'),
+  url('fonts/adventure-webfont.svg#adventureregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'officetypesansregular';
+  src: url('fonts/officetypesans-webfont.woff2') format('woff2'),
+  url('fonts/officetypesans-webfont.woff') format('woff'),
+  url('fonts/officetypesans-webfont.ttf') format('truetype'),
+  url('fonts/officetypesans-webfont.svg#officetypesansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+#bg-option-7 .gredient-info-bg3 {
+  background-color: $bg-option-7-color1 !important;
+  border: none !important;
+}
+
+#bg-option-7 .gredient-info-bg2 {
+  //background: linear-gradient(148deg, #7c5e61 0%, rgba(255, 255, 255, 0) 50%);
+}
+body#bg-option-7{
+  background: $bg-option-7-color2;
+  color: $bg-option-7-color3;
+}
+body#bg-option-7 #main-wrapper{
+  background: $bg-option-7-color2;
+}
+
+#bg-option-7 .memory {
+  background: $bg-option-7-color2;
+  font-family: $bg-option-7-font1;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+
+
+  &--first-name {
+    font-family: $bg-option-7-font2;
+    color: $bg-option-7-color3;
+  }
+
+  &--last-name {
+    font-family: $bg-option-7-font2;
+    text-transform: initial !important;
+    color: $bg-option-7-color3 !important;
+  }
+
+  &--patronymic {
+    font-family: $bg-option-7-font2;
+    color: $bg-option-7-color3;
+  }
+
+  .actions {
+    margin-top: 20px;
+  }
+
+  &--full-name {
+    border: none !important;
+    border-bottom: solid 5px $bg-option-7-color3 !important;
+    padding-bottom: 5px;
+  }
+
+  &--live {
+    text-align: right;
+    color: $bg-option-7-color3 !important;
+    font-family: $bg-option-7-font2, serif;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  .col-md-9{
+    border: none !important;
+  }
+  .mapboxgl-marker{
+    border:  none !important;
+  }
+
+
+
+  .btn-dark {
+    color: $bg-option-7-color3;
+    font-family: $bg-option-7-font1;
+    background-color: $bg-option-7-color1;
+    border-color: $bg-option-7-color3;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &--epitaph {
+    margin-top: auto;
+    font-family: $bg-option-7-font2;
+  }
+
+  .text-white{
+    color: $bg-option-7-color3 !important;
+  }
+
+  .memory-nav {
+    margin-bottom: 10px;
+  }
+
+  &--photo {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  &--photoArhive-photo {
+    max-width: 350px;
+    margin: 10px auto;
+    border-radius: 5px;
+  }
+
+  .bg-secondary {
+    background-color: $bg-option-7-color1 !important;
+    border: solid 1px $bg-option-7-color1;
+    border-radius: initial !important;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+    font-family: $bg-option-7-font1;
+
+    h4 {
+      font-weight: 300;
+    }
+  }
+
+  &--biography {
+    text-shadow: none;
+    text-align: center;
+  }
+
+  &--words {
+    text-shadow: none;
+    font-family: $bg-option-7-font2;
+    font-style: italic;
+  }
+
+  &--burialPlace-map {
+    height: 600px;
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+  }
+
+  &--burialPlace {
+    text-shadow: none;
+    border-bottom: none !important;
+  }
+
+
+
+  &--burialPlace-adress {
+    font-style: italic;
+  }
+
+  .card {
+    background: $bg-option-7-color2;
+    color: $bg-option-7-color3;
+    @media (min-width: 1000px) {
+      border-right: solid 2px $bg-option-7-color3;
+      border-left: solid 2px $bg-option-7-color3;
+      border-bottom: solid 2px $bg-option-7-color3;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .card div:nth-child(2) {
+      border: solid 2px $bg-option-7-color3;
+      border-top: none;
+    }
+    #burialPlace .container {
+      border-right: solid 2px $bg-option-7-color3;
+      border-left: solid 2px $bg-option-7-color3;
+      border-bottom: solid 2px $bg-option-7-color3;
+    }
+  }
+
+  .font-bold {
+    font-weight: bold;
+  }
+  .blockquote-footer{
+    color: $bg-option-7-color3;
+  }
+
+}
+
+
+//bg-option-6
+$bg-option-6-color2: #dad0cd;
+$bg-option-6-color1: #faf5f3;
+$bg-option-6-color3: #4a4746;
+
+$bg-option-6-font2: 'petersburgcitalic';
+$bg-option-6-font1: 'a_AntiqueTradyRgh';
+
+@font-face {
+  font-family: 'petersburgcitalic';
+  src: url('fonts/petersburgc_italic-webfont.woff2') format('woff2'),
+  url('fonts/petersburgc_italic-webfont.woff') format('woff'),
+  url('fonts/petersburgc_italic-webfont.ttf') format('truetype'),
+  url('fonts/petersburgc_italic-webfont.svg#petersburgcitalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'a_AntiqueTradyRgh';
+  src: url('fonts/a_AntiqueTradyRgh.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+#bg-option-6 .gredient-info-bg3 {
+  background-color: $bg-option-6-color1 !important;
+  border: none !important;
+}
+
+#bg-option-6 .gredient-info-bg2 {
+  //background: linear-gradient(148deg, #7c5e61 0%, rgba(255, 255, 255, 0) 50%);
+}
+body#bg-option-6{
+  background: $bg-option-6-color2;
+  color: $bg-option-6-color3;
+}
+body#bg-option-6 #main-wrapper{
+  background: $bg-option-6-color2;
+}
+
+#bg-option-6 .memory {
+  background: $bg-option-6-color2;
+  font-family: $bg-option-6-font1;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+
+
+  &--first-name {
+    font-family: $bg-option-6-font2;
+    color: $bg-option-6-color3;
+  }
+
+  &--last-name {
+    font-family: $bg-option-6-font2;
+    text-transform: initial !important;
+    color: $bg-option-6-color3 !important;
+  }
+
+  &--patronymic {
+    font-family: $bg-option-6-font2;
+    color: $bg-option-6-color3;
+  }
+
+  .actions {
+    margin-top: 20px;
+  }
+
+  &--full-name {
+    border: none !important;
+    border-bottom: solid 5px $bg-option-6-color2 !important;
+    padding-bottom: 5px;
+  }
+
+  &--live {
+    text-align: right;
+    color: $bg-option-6-color3 !important;
+    font-family: $bg-option-6-font2, serif;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  .col-md-9{
+    border: none !important;
+  }
+  .mapboxgl-marker{
+    border:  none !important;
+  }
+
+
+
+  .btn-dark {
+    color: $bg-option-6-color3;
+    font-family: $bg-option-6-font1;
+    background-color: $bg-option-6-color1;
+    border-color: $bg-option-6-color3;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &--epitaph {
+    margin-top: auto;
+    font-family: $bg-option-6-font2;
+  }
+
+  .text-white{
+    color: $bg-option-6-color3 !important;
+  }
+
+  .memory-nav {
+    margin-bottom: 10px;
+  }
+
+  &--photo {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  &--photoArhive-photo {
+    max-width: 350px;
+    margin: 10px auto;
+    border-radius: 5px;
+  }
+
+  .bg-secondary {
+    background-color: $bg-option-6-color1 !important;
+    border: solid 1px $bg-option-6-color1;
+    border-radius: initial !important;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+    font-family: $bg-option-6-font1;
+
+    h4 {
+      font-weight: 300;
+    }
+  }
+
+  &--biography {
+    text-shadow: none;
+    text-align: center;
+  }
+
+  &--words {
+    text-shadow: none;
+    font-family: $bg-option-6-font2;
+    font-style: italic;
+  }
+
+  &--burialPlace-map {
+    height: 600px;
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+  }
+
+  &--burialPlace {
+    text-shadow: none;
+    border-bottom: none !important;
+  }
+
+
+
+  &--burialPlace-adress {
+    font-style: italic;
+  }
+
+  .card {
+    background: $bg-option-6-color2;
+    color: $bg-option-6-color3;
+    @media (min-width: 1000px) {
+      border-right: solid 2px $bg-option-6-color3;
+      border-left: solid 2px $bg-option-6-color3;
+      border-bottom: solid 2px $bg-option-6-color3;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .card div:nth-child(2) {
+      border: solid 2px $bg-option-6-color3;
+      border-top: none;
+    }
+    #burialPlace .container {
+      border-right: solid 2px $bg-option-6-color3;
+      border-left: solid 2px $bg-option-6-color3;
+      border-bottom: solid 2px $bg-option-6-color3;
+    }
+  }
+
+  .font-bold {
+    font-weight: bold;
+  }
+  .blockquote-footer{
+    color: $bg-option-6-color3;
+  }
+
+}

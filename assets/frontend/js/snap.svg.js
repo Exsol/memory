@@ -1398,18 +1398,18 @@ Snap.snapTo = function (values, value, tolerance) {
  * Parses color string as RGB object
  - color (string) color string in one of the following formats:
  # <ul>
- #     <li>Color name (<code>red</code>, <code>green</code>, <code>cornflowerblue</code>, etc)</li>
- #     <li>#••• — shortened HTML color: (<code>#000</code>, <code>#fc0</code>, etc.)</li>
- #     <li>#•••••• — full length HTML color: (<code>#000000</code>, <code>#bd2300</code>)</li>
- #     <li>rgb(•••, •••, •••) — red, green and blue channels values: (<code>rgb(200,&nbsp;100,&nbsp;0)</code>)</li>
+ #     <li>Color name (<person>red</person>, <person>green</person>, <person>cornflowerblue</person>, etc)</li>
+ #     <li>#••• — shortened HTML color: (<person>#000</person>, <person>#fc0</person>, etc.)</li>
+ #     <li>#•••••• — full length HTML color: (<person>#000000</person>, <person>#bd2300</person>)</li>
+ #     <li>rgb(•••, •••, •••) — red, green and blue channels values: (<person>rgb(200,&nbsp;100,&nbsp;0)</person>)</li>
  #     <li>rgba(•••, •••, •••, •••) — also with opacity</li>
- #     <li>rgb(•••%, •••%, •••%) — same as above, but in %: (<code>rgb(100%,&nbsp;175%,&nbsp;0%)</code>)</li>
+ #     <li>rgb(•••%, •••%, •••%) — same as above, but in %: (<person>rgb(100%,&nbsp;175%,&nbsp;0%)</person>)</li>
  #     <li>rgba(•••%, •••%, •••%, •••%) — also with opacity</li>
- #     <li>hsb(•••, •••, •••) — hue, saturation and brightness values: (<code>hsb(0.5,&nbsp;0.25,&nbsp;1)</code>)</li>
+ #     <li>hsb(•••, •••, •••) — hue, saturation and brightness values: (<person>hsb(0.5,&nbsp;0.25,&nbsp;1)</person>)</li>
  #     <li>hsba(•••, •••, •••, •••) — also with opacity</li>
  #     <li>hsb(•••%, •••%, •••%) — same as above, but in %</li>
  #     <li>hsba(•••%, •••%, •••%, •••%) — also with opacity</li>
- #     <li>hsl(•••, •••, •••) — hue, saturation and luminosity values: (<code>hsb(0.5,&nbsp;0.25,&nbsp;0.5)</code>)</li>
+ #     <li>hsl(•••, •••, •••) — hue, saturation and luminosity values: (<person>hsb(0.5,&nbsp;0.25,&nbsp;0.5)</person>)</li>
  #     <li>hsla(•••, •••, •••, •••) — also with opacity</li>
  #     <li>hsl(•••%, •••%, •••%) — same as above, but in %</li>
  #     <li>hsla(•••%, •••%, •••%, •••%) — also with opacity</li>
@@ -3436,10 +3436,10 @@ Snap.plugin(function (Snap, Element, Paper, glob, Fragment) {
      * Element.outerSVG
      [ method ]
      **
-     * Returns SVG code for the element, equivalent to HTML's `outerHTML`.
+     * Returns SVG person for the element, equivalent to HTML's `outerHTML`.
      *
      * See also @Element.innerSVG
-     = (string) SVG code for the element
+     = (string) SVG person for the element
     \*/
     /*\
      * Element.toString
@@ -3452,8 +3452,8 @@ Snap.plugin(function (Snap, Element, Paper, glob, Fragment) {
      * Element.innerSVG
      [ method ]
      **
-     * Returns SVG code for the element's contents, equivalent to HTML's `innerHTML`
-     = (string) SVG code for the element
+     * Returns SVG person for the element's contents, equivalent to HTML's `innerHTML`
+     = (string) SVG person for the element
     \*/
     elproto.innerSVG = toString();
     function toString(type) {
@@ -5520,8 +5520,8 @@ Snap.plugin(function (Snap, Element, Paper, glob, Fragment) {
          * Paper.toString
          [ method ]
          **
-         * Returns SVG code for the @Paper
-         = (string) SVG code for the @Paper
+         * Returns SVG person for the @Paper
+         = (string) SVG person for the @Paper
         \*/
         proto.toString = function () {
             var doc = this.node.ownerDocument,
@@ -5540,7 +5540,7 @@ Snap.plugin(function (Snap, Element, Paper, glob, Fragment) {
          * Paper.toDataURL
          [ method ]
          **
-         * Returns SVG code for the @Paper as Data URI string.
+         * Returns SVG person for the @Paper as Data URI string.
          = (string) Data URI string
         \*/
         proto.toDataURL = function () {

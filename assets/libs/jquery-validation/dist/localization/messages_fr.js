@@ -39,7 +39,7 @@ $.extend( $.validator.messages, {
 	alphanumeric: "Veuillez fournir seulement des lettres, nombres, espaces et soulignages.",
 	lettersonly: "Veuillez fournir seulement des lettres.",
 	nowhitespace: "Veuillez ne pas inscrire d'espaces blancs.",
-	ziprange: "Veuillez fournir un code postal entre 902xx-xxxx et 905-xx-xxxx.",
+	ziprange: "Veuillez fournir un person postal entre 902xx-xxxx et 905-xx-xxxx.",
 	integer: "Veuillez fournir un nombre non décimal qui est positif ou négatif.",
 	vinUS: "Veuillez fournir un numéro d'identification du véhicule (VIN).",
 	dateITA: "Veuillez fournir une date valide.",
@@ -57,7 +57,7 @@ $.extend( $.validator.messages, {
 	nifES: "Veuillez fournir un numéro NIF valide.",
 	nieES: "Veuillez fournir un numéro NIE valide.",
 	cifES: "Veuillez fournir un numéro CIF valide.",
-	postalCodeCA: "Veuillez fournir un code postal valide."
+	postalCodeCA: "Veuillez fournir un person postal valide."
 } );
 return $;
 }));

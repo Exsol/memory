@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\QrCodeRepository;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Knp\DoctrineBehaviors\Contract\Entity\TimestampableInterface;
 use Knp\DoctrineBehaviors\Model\Timestampable\TimestampableTrait;
@@ -17,15 +18,19 @@ class QrCode implements TimestampableInterface
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(type: 'text')]
+   // #[ORM\Column(type: "integer", length: 9, unique:true, columnDefinition: "INT(9)")]
+    #[ORM\Column(type: "text", length: 9, unique: true, nullable: true)]
+    private ?string $label = null;
+
+    #[ORM\Column(type: 'text', nullable: true)]
     private ?string $img = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $uuid = null;
 
     #[ORM\ManyToOne(inversedBy: 'qrCodes')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?user $user = null;
+    private ?User $user = null;
 
     #[ORM\ManyToOne(inversedBy: 'qrCodeClient')]
     private ?User $client = null;
@@ -37,9 +42,26 @@ class QrCode implements TimestampableInterface
     #[ORM\JoinColumn(nullable: false)]
     private ?StatusQrCode $status = null;
 
+    public function __construct()
+    {
+        //$this->label = sprintf('%09d', $this->id);
+    }
+
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getLabel(): ?string
+    {
+        return $this->label;
+    }
+
+    public function setLabel(?string $label): static
+    {
+        $this->label = $label;
+
+        return $this;
     }
 
     public function getImg(): ?string
@@ -47,7 +69,7 @@ class QrCode implements TimestampableInterface
         return $this->img;
     }
 
-    public function setImg(string $img): static
+    public function setImg(?string $img): static
     {
         $this->img = $img;
 
@@ -59,7 +81,7 @@ class QrCode implements TimestampableInterface
         return $this->uuid;
     }
 
-    public function setUuid(string $uuid): static
+    public function setUuid(?string $uuid): static
     {
         $this->uuid = $uuid;
 

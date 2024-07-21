@@ -40,8 +40,32 @@ class QrCodeTableController extends AbstractController
                 ],
                 [
                     'db' => 'id',
-                    'dt' => 'id',
+                    'dt' => 'DT_RowClass',
+                    'formatter' => function ($d, $row) {
+                        return 'js--editable-parent';
+                    },
                 ],
+                [
+                    'db' => 'id',
+                    'dt' => 'DT_RowAttr',
+                    'formatter' => function ($d, $row) {
+                        return ['data-id'=>$d];
+                    },
+                ],
+                [
+                    'db' => 'label',
+                    'dt' => 'label',
+                ],
+
+                [
+                    'db' => 'id',
+                    'dt' => 'checkBox',
+                    'formatter' => function ($d, $row) {
+                        return '<span><input type="checkbox" class="js--check" name="userlog-status[]"
+                             data-id="'.$d.'" ></span>';
+                    },
+                ],
+
                 [
                     'db' => 'uuid',
                     'dt' => 'uuid',
@@ -61,7 +85,7 @@ class QrCodeTableController extends AbstractController
                     'dt' => 'client',
                     'formatter' => function ($d, $row) {
                         if ($d instanceof User) {
-                            return $d->getFullName();
+                            return $d->getEmail();
                         }
                         return '---';
                     },
@@ -71,7 +95,7 @@ class QrCodeTableController extends AbstractController
                     'dt' => 'memory',
                     'formatter' => function ($d, $row) {
                         if ($d instanceof Memory) {
-                            return $d->getId();
+                            return $d->getLastName().' '.$d->getFirstName().' '.$d->getPatronymic();
                         }
                         return '---';
                     },
@@ -136,7 +160,7 @@ class QrCodeTableController extends AbstractController
 
             return $this->json($results);
         } catch (HttpException $e) {
-            // In fact the line below returns 400 HTTP status code.
+            // In fact the line below returns 400 HTTP status person.
             // The message contains the error description.
             return $this->json($e->getMessage(), $e->getStatusCode());
         }

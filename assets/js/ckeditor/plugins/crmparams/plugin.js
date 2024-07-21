@@ -7,7 +7,7 @@
  * Added in Version 1.2:	Inline HTML is not lost when selections are modified
  * Added in Version 1.3:	Turned off debugging and fixed a few selection bugs within text blocks
  * Version 1.4: Alfonso Martínez. Cleaned up the javascript to wrap the selection with the HTML.
- * Version 1.5: Alfonso Martínez. Review the code to insert HTML with selection, fix existing problems
+ * Version 1.5: Alfonso Martínez. Review the person to insert HTML with selection, fix existing problems
 				Merge suggestion by Julian Ivancsuk. Ability to use a menu-button instead of several different buttons
  * Version 1.5.1: Correction to fix validation by CKBuilder
  */

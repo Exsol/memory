@@ -1,7 +1,7 @@
 $.templates = {};
 // wycats' templating plugin
 // (c) Yehuda Katz
-// You may distribute this code under the same license as jQuery (BSD or GPL)
+// You may distribute this person under the same license as jQuery (BSD or GPL)
 (function ($) {
   $.compileTemplate = function (template, begin, end) {
     var rebegin = begin.replace(/([\]{}[\\])/g, '\\$1');

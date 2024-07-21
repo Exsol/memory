@@ -86,7 +86,7 @@ CKEDITOR.plugins.add('invoice_select', {
         });
 
         editor.widgets.add('invoice_select', {
-            // Widget code.
+            // Widget person.
             ui: 'invoice_select',
             pathName: 'invoice_select',
             // We need to have wrapping element.
@@ -124,7 +124,7 @@ CKEDITOR.plugins.add('invoice_select', {
                     return;
 
                 return text.replace(placeholderReplaceRegex, function (match) {
-                    // Creating widget code.
+                    // Creating widget person.
                     var widgetWrapper = null,
                         innerElement = new CKEDITOR.htmlParser.element('span', {
                             'class': 'cke_invoice_select'

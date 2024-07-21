@@ -3,11 +3,13 @@
 namespace App\Controller\Admin\Dashboard;
 
 use App\Entity\User;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 
 #[Route(path: '/admin/dashboard')]
+#[Security("is_granted('ROLE_MANAGER')")]
 class DashboardController extends AbstractController
 {
 

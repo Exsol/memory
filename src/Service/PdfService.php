@@ -35,7 +35,7 @@ class PdfService
 
         // Output the generated PDF to Browser (force download)
         $dompdf->stream("$filename.pdf", [
-            "Attachment" => $attachment, // inline view
+            "Attachment" => false, // inline view
         ]);
     }
 

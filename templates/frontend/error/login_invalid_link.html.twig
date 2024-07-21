@@ -1,0 +1,12 @@
+{% extends 'front-base.html.twig' %}
+
+{% block body_id 'home' %}
+
+{% block body %}
+    <div class="error-box">
+        <div class="error-body text-center">
+            <h1 class="error-title text-secondary">{{ 'label.error'|trans }}</h1>
+            <h3 class="text-uppercase error-subtitle">{{ 'label.error.link_was_expired'|trans }}</h3>
+        </div>
+    </div>
+{% endblock %}

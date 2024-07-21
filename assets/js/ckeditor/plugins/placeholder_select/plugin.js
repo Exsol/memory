@@ -86,7 +86,7 @@ CKEDITOR.plugins.add('placeholder_select', {
         });
 
         editor.widgets.add('placeholder_select', {
-            // Widget code.
+            // Widget person.
             ui: 'placeholder_select',
             pathName: 'placeholder_select',
             // We need to have wrapping element.
@@ -124,7 +124,7 @@ CKEDITOR.plugins.add('placeholder_select', {
                     return;
 
                 return text.replace(placeholderReplaceRegex, function (match) {
-                    // Creating widget code.
+                    // Creating widget person.
                     var widgetWrapper = null,
                         innerElement = new CKEDITOR.htmlParser.element('span', {
                             'class': 'cke_placeholder_select'

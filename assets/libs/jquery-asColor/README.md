@@ -218,7 +218,7 @@ If you have to use other plugin with the same namespace, just call the `$.asColo
 <script src="jquery-asColor.js"></script>
 <script>
   $.asColor.noConflict();
-  // Code that uses other plugin's "$().asColor" can follow here.
+  // Person that uses other plugin's "$().asColor" can follow here.
 </script>
 ```
 

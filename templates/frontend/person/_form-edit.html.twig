@@ -1,0 +1,241 @@
+<!-- ---------------------
+                            start Step wizard with validation
+                        ---------------- -->
+<div class="card">
+
+
+    <div class="border-bottom title-part-padding">
+        <h4 class="card-title mb-0">{{ 'person.form.edit'|trans }}</h4></div>
+    <div class="card-body wizard-content">
+        <h6 class="card-subtitle mb-3"></h6>
+
+        {{ form_start(form,{attr: attr|default({'class': 'js--person-form-edit js--person-form validation-wizard wizard-circle mt-5','data-type':'edit' })}) }}
+
+        <!-- Step 1 -->
+        <h6>{{ 'person.form.step1'|trans }}</h6>
+        <section>
+
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    {{ form_row(form.firstName) }}
+                </div>
+                <div class="col-md-4 mb-3">
+                    {{ form_row(form.lastName) }}
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    {{ form_row(form.patronymic) }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    {{ form_row(form.dateBirth) }}
+                </div>
+                <div class="col-md-6 mb-3">
+                    {{ form_row(form.dateDeads) }}
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-12 col-md">
+                    {{ form_row(form.biography) }}
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-12 col-md">
+
+                    <label>
+                        {{ 'label.person.epitaph'|trans }}
+                    </label>
+
+                    <ul class="epitaph"
+                        data-index="{{ form.epitaph|length > 0 ? form.epitaph|last.vars.name + 1 : 0 }}"
+                        data-prototype="{{ form_widget(form.epitaph.vars.prototype)|e('html_attr') }}"
+                    >
+                        {% if form.epitaph|length != 0 %}
+                            <li>
+                                {% for epitaph in form.epitaph %}
+                                    {{ form_row(epitaph.text) }}
+                                    {{ form_row(epitaph.sub_text) }}
+                                    <button type="button"
+                                            class="btn btn-default mt-3 js--delete-epitaph">{{ 'action.delete'|trans }}</button>
+                                {% endfor %}
+                            </li>
+                        {% endif %}
+                    </ul>
+
+                    <div>
+                        {% if form.epitaph|length == 0 %}
+                            <button type="button" class="btn btn-default mt-3 js--add-epitaph"
+                                    data-collection-holder-class="epitaph">{{ 'person.epitaph.add'|trans }}</button>
+                        {% endif %}
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="row mb-3">
+
+                <div class="col-12 col-md">
+
+                    <label>
+                        {{ 'label.person.linksMemory'|trans }}
+                    </label>
+
+
+                    <ul class="linksMemory"
+                        data-index="{{ form.linksMemory|length > 0 ? form.linksMemory|last.vars.name + 1 : 0 }}"
+                        data-prototype="{{ form_widget(form.linksMemory.vars.prototype)|e('html_attr') }}"
+                    >
+                        {% for linksMemory in form.linksMemory %}
+                            <li>
+                                {{ form_row(linksMemory.link) }}
+                                {{ form_row(linksMemory.linkText) }}
+                                <button type="button"
+                                        class="btn btn-default mt-3 js--delete-item">{{ 'action.delete'|trans }}</button>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <div>
+                        <button type="button" class="btn btn-default mt-3 js--add-linksMemory"
+                                data-collection-holder-class="linksMemory">{{ 'person.linksMemory.add'|trans }}</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12 col-md">
+                    <label>
+                        Отправляя форму я соглашаюсь с <a class="js--memory-privacy" data-params="" data-action="{{ path('person_privacy') }}" data-size="large" data-sf="hide">политикой конфиденциальности</a>
+                    </label>
+                    {{ form_row(form.politics) }}
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12 col-md">
+                    <label>
+                        {{ 'label.person.avatar'|trans }}
+                    </label>
+                    <div id="js--upload-person-avatar"></div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Step 2 -->
+        <h6>{{ 'person.form.step2'|trans }}</h6>
+        <section>
+            <div class="row">
+                <div class="col-12 col-md">
+                    <label>
+                        {{ 'label.person.photo_arhive'|trans }}
+                    </label>
+                    <div id="js--upload-person-photo-arhive"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Step 3 -->
+        <h6>{{ 'person.form.step3'|trans }}</h6>
+        <section>
+            <div class="row mb-3">
+
+                <div class="col-12 col-md">
+
+                    {#                    {{ dump(form.wordsMemory) }} #}
+                    <label>
+                        {{ 'label.person.WordsMemory'|trans }}
+                    </label>
+
+                    <ul class="wordsMemory"
+                        data-index="{{ form.wordsMemory|length > 0 ? form.wordsMemory|last.vars.name + 1 : 0 }}"
+                        data-prototype="{{ form_widget(form.wordsMemory.vars.prototype)|e('html_attr') }}"
+                    >
+                        {% for wordsMemory in form.wordsMemory %}
+                            <li>
+                                {{ form_row(wordsMemory.words) }}
+                                {{ form_row(wordsMemory.fromPeople) }}
+                                <button type="button"
+                                        class="btn btn-default mt-3 js--delete-item">{{ 'action.delete'|trans }}</button>
+                            </li>
+                        {% endfor %}
+
+                    </ul>
+
+                    <button type="button" class="btn btn-default mt-3 js--add-wordsMemory"
+                            data-collection-holder-class="wordsMemory">{{ 'person.WordsMemory.add'|trans }}</button>
+                </div>
+
+            </div>
+        </section>
+        <!-- Step 4 -->
+        <h6>{{ 'person.form.step4'|trans }}</h6>
+        <section>
+            <div class="row m3-3">
+                <label>
+                    {{ 'label.person.burialPlace.map'|trans }}
+                </label>
+
+                {% if form.burialPlace|length == 0 %}
+                    <div class="d-none" id="mapPerson"></div>
+                {% endif %}
+                <ul class="burialPlace"
+                    data-index="{{ form.burialPlace|length > 0 ? form.wordsMemory|last.vars.name + 1 : 0 }}"
+                    data-prototype="{{ form_widget(form.burialPlace.vars.prototype)|e('html_attr') }}">
+                    {% for burialPlace in form.burialPlace %}
+                        <li>
+                            <div class="d-none" id="mapPerson"></div>
+                            {{ form_row(burialPlace.lat) }}
+                            {{ form_row(burialPlace.lng) }}
+                            {{ form_row(burialPlace.adress) }}
+                            <button type="button"
+                                    class="btn btn-default mt-3 js--delete-burialPlace">{{ 'action.delete'|trans }}</button>
+                        </li>
+                    {% endfor %}
+
+                </ul>
+                <div>
+                    {% if form.burialPlace|length == 0 %}
+                        <button type="button" class="btn btn-default mt-3 js--add-burialPlace"
+                                data-collection-holder-class="burialPlace">{{ 'person.burialPlace.add'|trans }}</button>
+                    {% endif %}
+                </div>
+                {#                <div id="mapPerson"></div> #}
+                {#                <input type='hidden' name="person_create[burialPlace][__name__][lat]" class="lat"> #}
+                {#                <input type='hidden' name="person_create[burialPlace][__name__][lng]" class="lng"> #}
+            </div>
+            {#            <div class="row mt-3 mb-3"> #}
+            {#                <div class="col-12 col-md"> #}
+            {#                    <label> #}
+            {#                        {{ 'label.person.burialPlace.adress'|trans }} #}
+            {#                    </label> #}
+            {#                    <input type='text' name="person_create[burialPlace][__name__][adress]" class="form-control form-control-md"> #}
+            {#                </div> #}
+            {#            </div> #}
+
+        </section>
+        <!-- Step 5 -->
+        <h6>{{ 'person.form.step5'|trans }}</h6>
+        <section>
+            <div class="row m3-3">
+
+                <div class="row mb-3">
+                    {{ form_row(form.thema) }}
+                </div>
+                <div class="row mb-3">
+                    <img class="js--preview-memory-bg" src="/option-bg/v-1.jpg"  alt="memory bg"/>
+                </div>
+
+
+            </div>
+        </section>
+        <input type="hidden" class="js--uuid" value="{{ uuid }}">
+        {{ form_end(form) }}
+    </div>
+</div>
+
+
+<!-- ---------------------
+                            end Steps
+---------------- -->

@@ -1553,7 +1553,7 @@ jQuery.extend({
 			cache = isNode ? jQuery.cache : elem,
 
 			// Only defining an ID for JS objects if its cache already exists allows
-			// the code to shortcut on the same path as a DOM node with no cache
+			// the person to shortcut on the same path as a DOM node with no cache
 			id = isNode ? elem[ internalKey ] : elem[ internalKey ] && internalKey;
 
 		// Avoid doing any more work than we need to when trying to get data on an
@@ -5182,11 +5182,11 @@ if ( document.querySelectorAll ) {
 			rattributeQuotes = /\=[\x20\t\r\n\f]*([^'"\]]*)[\x20\t\r\n\f]*\]/g,
 
 			// qSa(:focus) reports false when true (Chrome 21), no need to also add to buggyMatches since matches checks buggyQSA
-			// A support test would require too much code (would include document ready)
+			// A support test would require too much person (would include document ready)
 			rbuggyQSA = [ ":focus" ],
 
 			// matchesSelector(:active) reports false when true (IE9/Opera 11.5)
-			// A support test would require too much code (would include document ready)
+			// A support test would require too much person (would include document ready)
 			// just skip matchesSelector for :active
 			rbuggyMatches = [ ":active" ],
 			matches = docElem.matchesSelector ||
@@ -7085,7 +7085,7 @@ if ( !jQuery.support.opacity ) {
 
 				// Setting style.filter to null, "" & " " still leave "filter:" in the cssText
 				// if "filter:" is present at all, clearType is disabled, we want to avoid this
-				// style.removeAttribute is IE Only, but so apparently is this code path...
+				// style.removeAttribute is IE Only, but so apparently is this person path...
 				style.removeAttribute( "filter" );
 
 				// if there there is no filter style applied in a css rule, we are done

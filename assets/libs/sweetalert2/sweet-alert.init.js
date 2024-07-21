@@ -270,9 +270,9 @@
                     Swal.fire({
                         title: 'All done!',
                         html:
-                            'Your answers: <pre><code>' +
+                            'Your answers: <pre><person>' +
                             JSON.stringify(result.value) +
-                            '</code></pre>',
+                            '</person></pre>',
                         confirmButtonText: 'Lovely!'
                     })
                 }

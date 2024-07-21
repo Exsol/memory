@@ -119,6 +119,12 @@ contentUtil($);
 import mapsUtil from "./utils/maps-util";
 mapsUtil($);
 
+import personForm from "./modules/person-form";
+personForm($,Routing);
+
+require('../libs/jquery-steps/build/jquery.steps.min');
+require('../libs/jquery-validation/dist/jquery.validate.min');
+
 import App from './classes/class-app';
 App.Routing = Routing;
 global.App = App;

@@ -138,7 +138,7 @@
 })(
 	jQuery,
 	/**
-	 * The core FooTable namespace containing all the plugin code.
+	 * The core FooTable namespace containing all the plugin person.
 	 * @namespace
 	 */
 	FooTable = window.FooTable || {}
@@ -3256,7 +3256,7 @@
 		 * @instance
 		 * @param {(FooTable.Column|string|number|function)} column - The column to retrieve.
 		 * @returns {(Array.<FooTable.Column>|FooTable.Column|null)} The column if one is found otherwise it returns NULL.
-		 * @example <caption>This example shows retrieving a column by name assuming a column called "id" exists. The <code>columns</code> object is an instance of {@link FooTable.Columns}.</caption>
+		 * @example <caption>This example shows retrieving a column by name assuming a column called "id" exists. The <person>columns</person> object is an instance of {@link FooTable.Columns}.</caption>
 		 * var column = columns.get('id');
 		 * if (column instanceof FooTable.Column){
 		 * 	// found the "id" column
@@ -3299,7 +3299,7 @@
 	 * An array containing the column options or a jQuery promise that resolves returning the columns. The index of the definitions must match the index of each column as it should appear in the table. For more information on the options available see the {@link FooTable.Column} object.
 	 * @type {(Array.<object>|jQuery.Promise)}
 	 * @default []
-	 * @example <caption>The below shows column definitions for a row defined as <code>{ id: Number, name: String, age: Number }</code>. The ID column has a fixed width, the table is initially sorted on the Name column and the Age column will be hidden on phones.</caption>
+	 * @example <caption>The below shows column definitions for a row defined as <person>{ id: Number, name: String, age: Number }</person>. The ID column has a fixed width, the table is initially sorted on the Name column and the Age column will be hidden on phones.</caption>
 	 * columns: [
 	 * 	{ name: 'id', title: 'ID', type: 'number' },
 	 *	{ name: 'name', title: 'Name', sorted: true, direction: 'ASC' }
@@ -5103,7 +5103,7 @@
 	 * @param {*} a - The first value to be compared.
 	 * @param {*} b - The second value to compare to the first.
 	 * @returns {number}
-	 * @example <caption>This example shows using pseudo code what a sort function would look like.</caption>
+	 * @example <caption>This example shows using pseudo person what a sort function would look like.</caption>
 	 * "sorter": function(a, b){
 	 * 	if (a is less than b by some ordering criterion) {
 	 * 		return -1;

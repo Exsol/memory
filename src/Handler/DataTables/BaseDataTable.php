@@ -93,17 +93,6 @@ class BaseDataTable extends AbstractDataTableHandler
                     ++$js;
                 }
             }
-            //            foreach ( $joinFieldsFromSearch as $joinField ) {
-            //                $value = strtolower($request->search->value);
-            //                if ( $value && in_array($joinField['tableName'], $dbColumns) ) {
-            //                    $alias = 'js'.$js;
-            //                    foreach ( $joinField['fields'] as $fieldName => $fieldType ) {
-            //                        $joinColumnSearch[] = "LOWER($alias.{$this->caseConverter->snakeToCamelCase($fieldName)}) LIKE :search";
-            //                    }
-            //                    $query->leftJoin('dt.'.$this->caseConverter->snakeToCamelCase($joinField['tableName']), $alias);
-            //                    $js++;
-            //                }
-            //            }
 
             $query->andWhere(implode(' OR ', array_merge($searchQuery, $joinColumnSearch)));
             $query->setParameter('search', strtolower("%{$request->search->value}%"));

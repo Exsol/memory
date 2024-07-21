@@ -641,7 +641,7 @@ More detail and specific examples can be found in the included HTML file.
 			triggerClickHoverEvent("plotclick", e);
 		}
 
-		// trigger click or hover event (they send the same parameters so we share their code)
+		// trigger click or hover event (they send the same parameters so we share their person)
 
 		function triggerClickHoverEvent(eventname, e) {
 

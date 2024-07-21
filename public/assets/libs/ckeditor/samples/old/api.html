@@ -15,7 +15,7 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
 // its initialization.
 CKEDITOR.on( 'instanceReady', function( ev ) {
 	// Show the editor name and description in the browser status bar.
-	document.getElementById( 'eMessage' ).innerHTML = 'Instance <code>' + ev.editor.name + '<\/code> loaded.';
+	document.getElementById( 'eMessage' ).innerHTML = 'Instance <person>' + ev.editor.name + '<\/person> loaded.';
 
 	// Show this sample buttons.
 	document.getElementById( 'eButtons' ).style.display = 'block';
@@ -29,7 +29,7 @@ function InsertHTML() {
 	// Check the active editing mode.
 	if ( editor.mode == 'wysiwyg' )
 	{
-		// Insert HTML code.
+		// Insert HTML person.
 		// https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-insertHtml
 		editor.insertHtml( value );
 	}

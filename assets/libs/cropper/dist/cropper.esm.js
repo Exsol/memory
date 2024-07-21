@@ -981,7 +981,7 @@ function getSourceCanvas(image, _ref6, _ref7, _ref8) {
 var fromCharCode = String.fromCharCode;
 
 /**
- * Get string from char code in data view.
+ * Get string from char person in data view.
  * @param {DataView} dataView - The data view for read.
  * @param {number} start - The start index.
  * @param {number} length - The read length.

@@ -1,0 +1,252 @@
+{% extends 'front-base.html.twig' %}
+
+{% block body_id memory.thema.classname|default('bg-option-1') %}
+
+{% block body %}
+    <div class="container-fluid memory">
+
+        <div class="card gredient-info-bg3 m-t-0 m-b-0">
+            <div class="card-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="photo">
+                                <img class="memory--photo" src="/img/{{ memory.mainPhoto|default('') }}" alt="memory">
+                            </div>
+                        </div>
+                        <div class="col-md-9 d-flex flex-column">
+                            <div class="memory--last-name text-uppercase display-6 text-white">
+                                {{ memory.lastName|default('') }}
+                            </div>
+                            <div class="memory--full-name display-6 text-white">
+                                <span class="memory--first-name">
+                                    {{ memory.firstName|default('') }}
+                                </span>
+                                <span class="memory--patronymic">
+                                    {{ memory.patronymic|default('') }}
+                                </span>
+                            </div>
+
+                            <div class="memory--live text-white display-8">
+                                {{ memory.dateBirth|date('d.m.Y') }} - {{ memory.dateDeads|date('d.m.Y') }}
+                            </div>
+
+                            <div class="memory-zg text-white text-uppercase mt-2 mb-2 display-7">
+                                {{ 'label.data.pagememory'|trans }}
+                            </div>
+
+                            <div class="memory-nav d-flex align-items-start flex-column">
+
+                                {% if memory.wordsMemory is not empty  %}
+                                    <a href="#wordsMemory"
+                                       class="btn waves-effect waves-light btn-dark mt-2">{{ 'label.data.wordsMemory'|trans }}</a>
+                                {% endif %}
+
+                                {% if memory.photoArhive is not empty  %}
+                                    <a href="#photoArhive"
+                                       class="btn waves-effect waves-light btn-dark mt-2">{{ 'label.data.photoarhive'|trans }}</a>
+                                {% endif %}
+
+                                {% if memory.linksMemory is not empty  %}
+                                    <a href="#linksMemory"
+                                       class="btn waves-effect waves-light btn-dark mt-2">{{ 'label.data.linksMemory'|trans }}</a>
+                                {% endif %}
+
+                                {% if memory.biography  %}
+                                    <a href="#biography"
+                                       class="btn waves-effect waves-light btn-dark mt-2">{{ 'label.data.biography'|trans }}</a>
+                                {% endif %}
+
+                                {% if memory.burialPlace is not empty  %}
+                                    <a href="#burialPlace"
+                                       class="btn waves-effect waves-light btn-dark mt-2">{{ 'label.data.burialPlace'|trans }}</a>
+                                {% endif %}
+
+                            </div>
+
+
+                            <div class="memory--epitaph">
+                                <figure class=" text-end text-white">
+                                    <blockquote class="blockquote">
+                                        <p>
+                                            {% if memory.epitaph %}
+                                                {{ memory.epitaph[0].text|default('') }}
+                                            {% endif %}
+                                        </p>
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer text-white">
+                                        {% if memory.epitaph %}
+                                            {{ memory.epitaph[0].subText|default('') }}
+                                        {% endif %}
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% if  memory.wordsMemory is not empty  %}
+            <div class="card w-100" id="wordsMemory">
+                <div class="card-header bg-secondary">
+                    <h4 class="mb-0 text-white text-uppercase">{{ 'label.data.wordsMemory'|trans }}</h4>
+                </div>
+                <div class="container">
+                    <div class="card-body">
+                        {% for words in memory.wordsMemory %}
+                            <figure class="memory--words display-8 text-end mt-2">
+                                <blockquote class="blockquote">
+                                    <p class="display-7">
+                                        {% if words.words %}
+                                            {{ words.words|default('') }}
+                                        {% endif %}
+                                    </p>
+                                </blockquote>
+                                <figcaption class="blockquote-footer">
+                                    {% if words.fromPeople %}
+                                        {{ words.fromPeople|default('') }}
+                                    {% endif %}
+                                </figcaption>
+                            </figure>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+
+
+
+        {% if memory.photoArhive is not empty  %}
+
+            <div class="card w-100" id="photoArhive">
+                <div class="card-header bg-secondary">
+                    <h4 class="mb-0 text-white text-uppercase">{{ 'label.data.photoarhive'|trans }}</h4>
+                </div>
+                <div class="container">
+                    <div class="card-body">
+
+                        <div id="carouselExample" class="carousel slide carousel-dark">
+                            <div class="carousel-inner">
+
+                                {% for photo in memory.photoArhive %}
+
+                                    <div class="carousel-item {% if loop.first %}active{% endif %}">
+                                        <img src="/img/{{ photo.photo }}"
+                                             class="memory--photoArhive-photo d-block" alt="photo">
+                                    </div>
+
+                                {% endfor %}
+
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                    data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Далее</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                    data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden"> Назад </span></button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+
+        {% if  memory.linksMemory is not empty  %}
+            <div class="card w-100" id="linksMemory">
+                <div class="card-header bg-secondary">
+                    <h4 class="mb-0 text-white text-uppercase">{{ 'label.data.linksMemory'|trans }}</h4>
+                </div>
+
+                <div class="card-body">
+                    <div class="d-flex align-items-start flex-column">
+                        {% for link in memory.linksMemory %}
+                            <a target="_blank" class="btn waves-effect waves-light btn-dark mt-2"
+                               href="{{ link.link|default('#') }}">{{ link.linkText|default('Адресс ссылки') }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+        {% endif %}
+
+        {% if memory.biography %}
+            <div class="card w-100" id="biography">
+                <div class="card-header bg-secondary text-uppercase">
+                    <h4 class="mb-0 text-white">{{ 'label.data.biography'|trans }}</h4>
+                </div>
+                <div class="container">
+                    <div class="card-body memory--biography display-7">
+                        {{ memory.biography|nl2br }}
+                    </div>
+                </div>
+
+            </div>
+        {% endif %}
+
+
+        {% if memory.burialPlace is not empty %}
+            <div class="card w-100" id="burialPlace">
+                <div class="card-header bg-secondary text-uppercase">
+                    <h4 class="mb-0 text-white">{{ 'label.data.burialPlace'|trans }}</h4>
+                </div>
+
+                <div class="card-body memory--burialPlace ">
+                    <div class="memory--burialPlace-map" id="mapBurialPlace" data-lng="{{ memory.burialPlace[0].lng }}"
+                         data-lat="{{ memory.burialPlace[0].lat }}"></div>
+
+                </div>
+                <div class="container">
+                    <div class="card-body memory--burialPlace ">
+                        <p class="display-7 font-bold mt-3">{{ 'label.data.burialPlace.adress'|trans }}</p>
+                        <p class="display-7 text-black memory--burialPlace-adress ">{{ memory.burialPlace[0].adress }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+
+        <div class="card w-100" id="burialPlace">
+            <div class="card-header bg-secondary text-uppercase">
+                <h4 class="mb-0 text-white">{{ 'label.data.change_information'|trans }}</h4>
+            </div>
+
+            <div class="card-body">
+                <a href="javascript:void(0)"
+                   class="btn waves-effect waves-light btn-dark mt-2 js--send-change-memory-link"
+                    data-uuid="{{ uuid|default('')}}"
+                >{{ 'label.data.change_information_link'|trans }}</a>
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+
+        $(function () {
+
+
+        });
+
+
+    </script>
+
+
+
+
+
+{% endblock %}

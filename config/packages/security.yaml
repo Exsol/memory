@@ -12,7 +12,7 @@ security:
 #        FOS\UserBundle\Model\UserInterface: auto
 
     providers:
-        fos_userbundle:
+        database_users:
             entity: { class: App\Entity\User, property: username }
             #id: fos_user.user_provider.username
 
@@ -23,10 +23,16 @@ security:
 
         main:
             pattern: ^/
+            login_link:
+                check_route: login_check
+                signature_properties: [ 'id' ]
+                failure_handler: App\Security\Authentication\AuthenticationErrorHandler
+                success_handler: App\Security\Authentication\AuthenticationSuccessHandler
             # Enable the authenticator manager
             lazy: true
+            access_denied_handler: App\Security\AccessDeniedHandler
             form_login:
-                provider: fos_userbundle
+                #provider: fos_userbundle
                 login_path: security_login
                 check_path: security_login
                 enable_csrf: true
@@ -41,10 +47,15 @@ security:
                 csrf_parameter: logout
                # csrf_token_generator: security.csrf.token_manager
             entry_point: 'form_login'
+           # entry_point: App\Security\AuthenticationEntryPoint
 
     access_control:
         - { path: ^/dashboard,           roles: [ROLE_ADMIN,ROLE_MEMBER,ROLE_MANAGER]} #, requires_channel: https }
         - { path: ^/login,           roles: PUBLIC_ACCESS} #, requires_channel: https }
+        - { path: ^/person,           roles: PUBLIC_ACCESS} #, requires_channel: https }
+        - { path: ^/person/edit,           roles: ROLE_MEMBER} #, requires_channel: https }
+        - { path: ^/person/code/^,           roles: PUBLIC_ACCESS} #, requires_channel: https }
+        - { path: ^/person/code,           roles: PUBLIC_ACCESS} #, requires_channel: https }
         - { path: ^/admin/qr-code,           roles: ROLE_MANAGER} #, requires_channel: https }
 
     role_hierarchy:
